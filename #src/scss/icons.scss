@@ -23,9 +23,16 @@
 		@extend %ic;
 		display: block;
 	}
+  &:after {
+    @extend %ic;
+		display: block;
+  }
 }
 
 ._icon-arrow_down:before {
+  content: "\e900";
+}
+._icon-arrow_down-after:after {
   content: "\e900";
 }
 ._icon-arrow_gallery:before {
@@ -34,7 +41,7 @@
 ._icon-arrow_detailed:before {
   content: "\e902";
 }
-._icon-arrow_detailed-after::after {
+._icon-arrow_detailed-after:after {
   content: "\e902";
 }
 ._icon-arrow_paggination:before {

@@ -1,4 +1,123 @@
 //====================================================================================================
+.header {
+		// .header__content
+		&__content {
+		}
+		// .header__menu
+		&__menu {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+		}
+}
+
+.menu {
+		// .menu__logo
+		&__logo {
+      flex: 0 0 190 / $maxWidthContainer * 100%;
+		}
+		// .menu__nav
+		&__nav {
+      flex: 0 0 450 / $maxWidthContainer * 100%;
+		}
+		// .menu__list
+		&__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+		}
+		// .menu__item
+		&__item {
+		}
+		// .menu__link
+		&__link {
+      font-weight: 600;
+      color: $mainColor;
+		}
+		// .menu__price-wrapper
+		&__price-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 15px;
+      background: url(../img/price.svg);
+      color: $mainColor;
+		}
+    &__price {
+      display: flex;
+      align-items: center;
+      background: url(../img/price.svg);
+      font-weight: 600;
+      color: $mainColor;
+      &::before {
+        margin-right: 10px;
+        font-size: 13px;
+      }
+    }
+		// .menu__lang-dropdown
+		&__lang-dropdown {
+		}
+		// .menu__info
+		&__info {
+		}
+		// .menu__icon
+		&__icon {
+		}
+}
+.lang-dropdown {
+		// .lang-dropdown__btn
+		&__btn {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 14px;
+      &::after {
+        font-size: 4px;
+        margin-left: 6px;
+      }
+		}
+		// .lang-dropdown__list
+		&__list {
+      display: none;
+		}
+		// .lang-dropdown__item
+		&__item {
+		}
+		// .lang-dropdown__link
+		&__link {
+      color: $mainColor;
+			// .lang-dropdown__link_ua
+			&_ua {
+			}
+			// .lang-dropdown__link_ru
+			&_ru {
+			}
+		}
+}
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+		// .menu-info__link
+		&__link {
+      color: $mainColor;
+			// .menu-info__link_call
+			&_call {
+        // margin-bottom: 5px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+			}
+			// .menu-info__link_location
+			&_location {
+        font-size: 14px;
+        line-height: 14px;
+			}
+		}
+}
 
 //====================================================================================================
 

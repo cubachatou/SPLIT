@@ -1,8 +1,10 @@
 <header class="header">
 	<div class="header__content _container">
     <div class="header__menu menu">
-      <nav class="menu__body">
-        <a class="menu__logo"><img src="/SPLIT/img/icons/logo.svg" alt="logo"></a>
+      <div class="menu__logo">
+        <img src="img/icons/logo.svg" alt="logo">
+      </div>
+      <nav class="menu__nav">
         <ul class="menu__list">
           <li class="menu__item"><a href="" class="menu__link">Главная</a></li>
           <li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
@@ -11,15 +13,20 @@
           <li class="menu__item"><a href="" class="menu__link">Контаĸты</a></li>
         </ul>
       </nav>
-      <a href="#" download="Price" class="menu__price _price"></a>
-      <ul class="menu__lang lang">
-        <li class="lang__item"><a href="#" class="lang__link lang__link_ua"></a></li>
-        <li class="lang__item"><a href="#" class="lang__link lang__link_ru"></a></li>
-      </ul>
-      <span class="menu__info menu-info">
+      <a href="#" download="Price" class="menu__price-wrapper _price">
+        <div class="menu__price _icon-price">Прайс</div>
+      </a>
+      <div class="menu__lang-dropdown lang-dropdown">
+        <div class="lang-dropdown__btn _icon-arrow_down-after">RU</div>
+        <ul class="lang-dropdown__list">
+          <li class="lang-dropdown__item"><a href="#" class="lang-dropdown__link lang-dropdown__link_ua">UA</a></li>
+          <li class="lang-dropdown__item"><a href="#" class="lang-dropdown__link lang-dropdown__link_ru">RU</a></li>
+        </ul>
+      </div>
+      <div class="menu__info menu-info">
         <a href="tel:+380665670204" class="menu-info__link menu-info__link_call">(066)&nbsp;567-02-04</a>
         <a href="#" class="menu-info__link menu-info__link_location">г. Херсон, Ул.Газовая,8</a>
-      </span>
+      </div>
     </div>
     <button type="button" class="menu__icon icon-menu">
       <span></span>
