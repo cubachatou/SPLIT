@@ -1,28 +1,64 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 ._h1 {
-  @include adaptiv-font(40, 24, 40);
+  @include adaptiv-font(40, 24, 1);
   line-height: 48 / 40 * 100%;
   font-weight: 700;
 }
 ._h2 {
-  @include adaptiv-font(28, 22, 28);
+  @include adaptiv-font(28, 22, 1);
   line-height: 36 / 28 * 100%;
   font-weight: 700;
 }
 ._h3 {
-  @include adaptiv-font(24, 20, 24);
+  @include adaptiv-font(24, 20, 1);
   line-height: 32 / 24 * 100%;
 }
 ._h4 {
-  @include adaptiv-font(18, 14, 18);
+  @include adaptiv-font(18, 14, 1);
   line-height: 24 / 18 * 100%;
   font-weight: 600;
 }
 //====================================================================================================
 ._price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
   background: url(../img/price.svg);
-  width: 125px;
+  @include adaptiv-value(width, 125, 85, 1);
+  @include adaptiv-value(height, 40, 33, 1);
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiv-font(16, 12, 1);
+    color: $mainColor;
+    font-weight: 600;
+    &::before {
+      @include adaptiv-value(margin-right, 10, 5, 1);
+      @include adaptiv-font(13, 7, 1);
+    }
+  }
+}
+._price_wide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  width: 188px;
   height: 40px;
+  background: url(../img/price-wide.svg);
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: $mainColor;
+    &::before {
+      margin-right: 10px;
+      font-size: 13.5px;
+    }
+  }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 

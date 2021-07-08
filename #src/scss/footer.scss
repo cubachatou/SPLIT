@@ -1,5 +1,99 @@
-footer{}
+.socials {
+  flex: 0 0 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 105px;
+  &__link {
+    color: $mainColor;
+    font-size: 17px;
+    &_facebook {
+      padding: 0 4px;
+      margin-left: -4px;
+    }
+    &_instagram {
+    }
+  }
+}
 //====================================================================================================
-
+.footer {
+		// .footer__content
+		&__content {
+		}
+		// .footer__menu
+		&__menu {
+      display: flex;
+      align-items: center;
+		}
+		// .footer__info
+		&__info {
+		}
+}
+.menu {
+		// .menu__logo
+		&__logo {
+		}
+		// .menu__nav
+		&__nav {
+		}
+		// .menu__list
+		&__list {
+		}
+		// .menu__item
+		&__item {
+		}
+		// .menu__link
+		&__link {
+		}
+		// .menu__price-wrapper
+		&__price-wrapper {
+		}
+		// .menu__price
+		&__price {
+		}
+		// .menu__socials
+		&__socials {
+		}
+}
+.socials {
+		// .socials__link
+		&__link {
+			// .socials__link_facebook
+			&_facebook {
+			}
+			// .socials__link_instagram
+			&_instagram {
+			}
+		}
+}
+.info-footer {
+		// .info-footer__column
+		&__column {
+			// .info-footer__column_contacts
+			&_contacts {
+			}
+			// .info-footer__column_location
+			&_location {
+			}
+			// .info-footer__column_callback
+			&_callback {
+			}
+		}
+		// .info-footer__phone-wrapper
+		&__phone-wrapper {
+		}
+		// .info-footer__mail
+		&__mail {
+		}
+		// .info-footer__shop
+		&__shop {
+		}
+		// .info-footer__address
+		&__address {
+		}
+		// .info-footer__schedule
+		&__schedule {
+		}
+}
 //====================================================================================================
 

@@ -8,17 +8,32 @@
       min-height: 88px;
       display: flex;
       align-items: center;
+      @media (max-width: $md3+px) {
+        justify-content: space-between;
+      }
 		}
 }
 
 .menu {
 		// .menu__logo
 		&__logo {
-      flex: 0 0 190 / $maxWidthContainer * 100%;
+      flex: 0 0 109 / $maxWidthContainer * 100%;
+      min-width: 74px;
+      height: 50px;
+      @include adaptiv-value(margin-right, 82, 20, 0);
+      background: url(../img/icons/logo.svg) no-repeat 50% 50% / contain;
 		}
 		// .menu__nav
 		&__nav {
       flex: 0 0 450 / $maxWidthContainer * 100%;
+      margin-right: auto;
+      padding-right: 10px;
+      @media (max-width: $md2+px) {
+        flex: 0 0 65%;
+      }
+      @media (max-width: $md3+px) {
+        display: none;
+      }
 		}
 		// .menu__list
 		&__list {
@@ -28,40 +43,58 @@
 		}
 		// .menu__item
 		&__item {
+      padding: 0 10px;
 		}
 		// .menu__link
 		&__link {
       font-weight: 600;
       color: $mainColor;
 		}
+    // .menu__info-wrapper
+    &__info-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 0 1 378px;
+      @media (max-width: $md2+px) {
+        flex: 0 0 auto;
+      }
+      @media (max-width: $md3+px) {
+        flex: 1 0 auto;
+      }
+    }
 		// .menu__price-wrapper
 		&__price-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 15px;
-      background: url(../img/price.svg);
-      color: $mainColor;
 		}
     &__price {
-      display: flex;
-      align-items: center;
-      background: url(../img/price.svg);
-      font-weight: 600;
-      color: $mainColor;
-      &::before {
-        margin-right: 10px;
-        font-size: 13px;
-      }
     }
 		// .menu__lang-dropdown
 		&__lang-dropdown {
+      @media (max-width: $md2+px) {
+        display: none;
+      }
 		}
 		// .menu__info
 		&__info {
+      @media (max-width: $md2+px) {
+        display: none;
+      }
 		}
-		// .menu__icon
-		&__icon {
+		// .menu__btn-menu
+		&__btn-menu {
+      @media (min-width: $md3+px) {
+        display: none;
+      }
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & button {
+        margin-right: 10px;
+      }
+      & label {
+        font-weight: 600;
+      }
 		}
 }
 .lang-dropdown {
@@ -106,7 +139,7 @@
 			// .menu-info__link_call
 			&_call {
         // margin-bottom: 5px;
-        font-size: 20px;
+        @include adaptiv-font(20, 16, 1);
         line-height: 20px;
         font-weight: 600;
         letter-spacing: 0.04em;
@@ -120,18 +153,17 @@
 }
 
 //====================================================================================================
-
-/*
 //Burger
 .icon-menu {
 	display: none;
 	@media (max-width: $md3+px) {
 		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
+    position: relative;
+		// position: absolute;
+		// top: 18px;
+		// right: 10px;
+		width: 15px;
+		height: 8px;
 		cursor: pointer;
 		z-index: 5;
 		span {
@@ -143,11 +175,11 @@
 			height: 2px;
 			background-color: #000;
 			&:first-child {
-				top: 0px;
+				top: -1px;
 			}
 			&:last-child {
 				top: auto;
-				bottom: 0px;
+				bottom: -1px;
 			}
 		}
 		&._active {
@@ -165,4 +197,3 @@
 		}
 	}
 }
-*/
