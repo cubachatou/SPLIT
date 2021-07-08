@@ -45,7 +45,7 @@
   justify-content: flex-end;
   align-items: center;
   padding-right: 16px;
-  width: 188px;
+  flex: 0 0 188px;
   height: 40px;
   background: url(../img/price-wide.svg);
   &-content {
@@ -58,6 +58,25 @@
       margin-right: 10px;
       font-size: 13.5px;
     }
+  }
+}
+
+._phone-number {
+  margin-bottom: 15px;
+  font-weight: 600;
+  @include adaptiv-font(20, 16, 1);
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: $mainColor;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+._slash {
+  @extend ._phone-number;
+  margin: 0 15px 0 20px;
+  @media (min-width: $md4+px) {
+    display: none;
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================

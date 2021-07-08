@@ -1,59 +1,78 @@
 <footer class="footer">
-	<div class="footer__content _container">
-    <div class="footer__menu menu"> <!-- FOOTER__MENU -->
-      <div class="menu__logo">
-        <!-- <img src="img/icons/logo.svg" alt="logo"> -->
+  <div class="footer__wrapper">
+    <div class="footer__content _container">
+      <!-- MENU -->
+      <div class="footer__menu menu">
+        <div class="menu__logo menu__logo_footer">
+          <!-- <img src="img/icons/logo.svg" alt="logo"> -->
+        </div>
+        <nav class="menu__nav menu__nav_footer">
+          <ul class="menu__list menu__list_footer">
+            <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Главная</a></li>
+            <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Каталог</a></li>
+            <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Услуги</a></li>
+            <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Портфолио</a></li>
+            <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Контаĸты</a></li>
+          </ul>
+        </nav>
+        <a href="#" download="Price" class="menu__price-wrapper menu__price-wrapper_footer _price_wide">
+          <div class="menu__price menu__price_footer _icon-price _price_wide-content">Скачать прайс</div>
+        </a>
+        <div class="menu__socials socials">
+          <a href="#" class="socials__link socials__link_facebook _icon-facebook" rel="noindex nofollow"></a>
+          <a href="#" class="socials__link socials__link_instagram _icon-instagram" rel="noindex nofollow"></a>
+        </div>
       </div>
-      <nav class="menu__nav">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="" class="menu__link">Главная</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Портфолио</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Контаĸты</a></li>
+      <nav class="menu__nav menu__nav_footer menu__nav_footer-mobile">
+        <ul class="menu__list menu__list_footer">
+          <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Главная</a></li>
+          <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Каталог</a></li>
+          <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Услуги</a></li>
+          <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Портфолио</a></li>
+          <li class="menu__item menu__item_footer"><a href="" class="menu__link menu__link__footer">Контаĸты</a></li>
         </ul>
       </nav>
-      <a href="#" download="Price" class="menu__price-wrapper _price_wide">
-        <div class="menu__price _icon-price _price_wide-content">Скачать прайс</div>
-      </a>
-      <div class="menu__socials socials">
-        <a href="#" class="socials__link socials__link_facebook _icon-facebook"></a>
-        <a href="#" class="socials__link socials__link_instagram _icon-instagram"></a>
-      </div>
-    </div>
-    <!-- FOOTER INFO BLOCK -->
-    <div class="footer__info info-footer">
-      <!-- CONTACTS -->
-      <div class="info-footer__column info-footer__column_contacts">
-        <div class="info-footer__phone-wrapper">
-          <a href="tel:+380665670204">(066)&nbsp;567-02-04</a>
-          <span>/</span>
-          <a href="tel:+380500810986">(050)&nbsp;081-09-86</a>
-        </div>
-        <a href="mailto:split.ks@ukr.net" class="info-footer__mail">split.ks@ukr.net</a>
-      </div>
-      <!-- LOCATION & SCHEDULE -->
-      <div class="info-footer__column info-footer__column_location">
-        <div class="info-footer__shop">Магазин:</div>
-        <a class="info-footer__address">г. Херсон, Ул.Газовая,8</a>
-        <div class="info-footer__schedule">
-          <p>Пн-Пт:&nbsp;8:30 — 17:00</p>
-          <span>/</span>
-          <p>Сб:&nbsp;8:30 — 13:00</p>
-          <span>/</span>
-          <p>Вс:&nbsp;Выходной</p>
-        </div>
-      </div>
-      <!-- CALLBACK FORM -->
-      <div class="info-footer__column info-footer__column_callback cb-footer">
-        <form action="#" class="form">
-          <div class="form__line">
-            <label for="cb-footer" class="form__label"></label>
-            <input id="cb-footer" autocomplete="off" type="tel" name="form[]" data-error="Неверный формат номера" data-value="+380 (  _ _  )  _ _ _   _ _   _ _" class="input _req _phone">
+      <!--INFO BLOCK -->
+      <div class="footer__info info-footer">
+        <!-- CONTACTS -->
+        <div class="info-footer__column info-footer__column_contacts">
+          <div class="info-footer__phone-wrapper">
+            <a href="tel:+380665670204" class="_phone-number">(066)&nbsp;567-02-04</a>
+            <span class="_slash">/</span>
+            <a href="tel:+380500810986" class="_phone-number">(050)&nbsp;081-09-86</a>
           </div>
-          <button type="submit" class="btn">Отправить</button>
-        </form>
+          <a href="mailto:split.ks@ukr.net" class="info-footer__mail">split.ks@ukr.net</a>
+        </div>
+        <!-- LOCATION & SCHEDULE -->
+        <div class="info-footer__column info-footer__column_location">
+          <div class="info-footer__shop">Магазин:</div>
+          <a href="#" class="info-footer__address">г. Херсон, Ул.Газовая,8</a>
+          <div class="info-footer__schedule">
+            <p>Пн-Пт:&nbsp;&nbsp;8:30 — 17:00</p>
+            <span>/</span>
+            <p>Сб:&nbsp;&nbsp;8:30 — 13:00</p>
+            <span>/</span>
+            <p>Вс:&nbsp;&nbsp;Выходной</p>
+          </div>
+        </div>
+        <!-- CALLBACK FORM -->
+        <div class="info-footer__column info-footer__column_callback cb-footer">
+          <form action="#" class="form">
+            <div class="form__line">
+              <label for="cb-footer" class="form__label">Закажите обратный звонок</label>
+              <input id="cb-footer" autocomplete="off" type="tel" name="form[]" data-error="Неверный формат номера"
+                data-value="+380 (  _ _  )  _ _ _   _ _   _ _" class="input _req _phone">
+            </div>
+            <button type="submit" class="btn _fw">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <!-- AGREEMENTS -->
+      <div class="footer__agree agree-footer">
+        <a href="#" class="agree-footer__link agree-footer__link_policy">Политика конфиденциальности</a>
+        <a href="#" class="agree-footer__link agree-footer__link_responsibility">Отказ от ответственности</a>
+        <a href="#" class="agree-footer__link agree-footer__link_mailing">Согласие с рассылкой</a>
       </div>
     </div>
-	</div>
+  </div>
 </footer>
