@@ -382,7 +382,7 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+380 (99) 999 99 99", {
+					Inputmask("+380 (  9 9  )  9 9 9   9 9   9 9", {
             //"placeholder": '',
             clearIncomplete: true,
             clearMaskOnLostFocus: true,
