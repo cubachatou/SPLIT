@@ -51,9 +51,19 @@ hr {
     font-weight: 600;
     &::before {
       @include adaptiv-value(margin-right, 10, 5, 1);
-      @include adaptiv-font(13, 7, 1);
+      @include adaptiv-font(13, 8, 1);
       color: $mainColor;
     }
+  }
+  & ._icon-price {
+      @media (max-width: $md3+px) {
+        display: none;
+      }
+  }
+  & ._icon-price-s {
+      @media (min-width: $md3+px) {
+        display: none;
+      }
   }
 }
 ._price_wide {
