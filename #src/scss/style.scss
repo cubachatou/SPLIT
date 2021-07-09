@@ -100,7 +100,7 @@ body {
 ._bg-gray {
   background: #e5e5e5;
 }
-//===================================================================================================================================
+//======================================================================================
 .main-slider {
   // .main-slider__content
   &__content {
@@ -180,7 +180,7 @@ body {
   &__img {
   }
 }
-
+//======================================================================================
 .catalog-nav {
   // .catalog-nav__content
   &__content {
@@ -256,7 +256,7 @@ body {
     height: 100%;
   }
 }
-
+//======================================================================================
 .popular {
   padding: 25px 0px;
 		// .popular__content
@@ -403,5 +403,156 @@ body {
       }
 		}
 }
+//======================================================================================
+.main-services {
+  padding: 25px 0 45px;
+		// .main-services__content
+		&__content {
+		}
+		// .main-services__title
+		&__title {
+		}
+		// .main-services__row
+		&__row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @media (min-width: $md3+px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+      }
+		}
+		// .main-services__item
+		&__item {
+      @media (min-width: $md3+px) {
+        flex: 0 1 33.333%;
+        max-width: 350px;
+      }
+      display: flex;
+      flex-direction: column;
+      @include adaptiv-value("padding-top", 10, 5, 1);
+      @include adaptiv-value("padding-right", 10, 5, 1);
+      @include adaptiv-value("padding-left", 10, 5, 1);
+      @include adaptiv-value("padding-bottom", 25, 20, 1);
+      background-color: #fff;
+		}
+}
 
-//</ОСНОВНОЙ БЛОК>====================================================================================================
+.item-services {
+		// .item-services__img-wrapper
+		&__img-wrapper {
+      padding-top: 45.455%;
+      margin-bottom: 25px;
+      @media (max-width: $md3+px) {
+        margin-bottom: 30px;
+      }
+		}
+		// .item-services__textarea
+		&__textarea {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+		}
+		// .item-services__title
+		&__title {
+      margin-bottom: 10px;
+      @media (min-width: $md3+px) {
+        padding-right: 20px;
+      }
+		}
+		// .item-services__text
+		&__text {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 22px;
+		}
+		// .item-services__link
+		&__link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-top: auto;
+      width: fit-content;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $accentColor;
+      @media (any-hover: hover) {
+        &:hover {
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 1px;
+            background-color: $accentColor;
+          }
+        }
+      }
+      &::after {
+        padding-left: 8px;
+        font-size: 8.5px;
+      }
+		}
+}
+//======================================================================================
+.consultation {
+  padding: 45px 0;
+		// .consultation__content
+		&__content {
+		}
+		// .consultation__wrapper
+		&__wrapper {
+      padding: 60px 65px 35px;
+      background: #fff;
+      border: 2px solid #8B0304;
+		}
+		// .consultation__title
+		&__title {
+      margin-bottom: 55px;
+		}
+		// .consultation__list
+		&__list {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 55px;
+		}
+		// .consultation__item
+		&__item {
+      flex: 0 1 25%;
+      padding-top: 80px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      &_1 {
+        background-image: url(../img/catalog/icons/icon3.svg);
+      }
+      &_2 {
+        background-image: url(../img/catalog/icons/icon1.svg);
+      }
+      &_3 {
+        background-image: url(../img/catalog/icons/icon2.svg);
+      }
+      &_4 {
+        background-image: url(../img/catalog/icons/icon4.svg);
+      }
+		}
+		// .consultation__call-wrapper
+		&__call-wrapper {
+      padding: 55px 0 80px;
+		}
+		// .consultation__call-now
+		&__call-now {
+		}
+		// .consultation__number
+		&__number {
+		}
+		// .consultation__text
+		&__text {
+		}
+}
+//</ОСНОВНОЙ БЛОК>======================================================================

@@ -37,6 +37,12 @@ hr {
   line-height: 24 / 18 * 100%;
   font-weight: 600;
 }
+._h5 {
+  font-weight: 600;
+  @include adaptiv-font(28, 20, 1);
+  line-height: 36 / 28 * 100%;
+  text-align: center;
+}
 //====================================================================================================
 ._price {
   display: flex;
@@ -100,6 +106,9 @@ hr {
   color: $mainColor;
   &:hover {
     text-decoration: underline;
+  }
+  &._b {
+
   }
 }
 ._slash {
