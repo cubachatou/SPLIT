@@ -13,6 +13,9 @@ hr {
       display: none;
     }
   }
+  &-header {
+    background-color: #EFF1F6;
+  }
 }
 ._h1 {
   @include adaptiv-font(40, 24, 1);
@@ -20,6 +23,7 @@ hr {
   font-weight: 700;
 }
 ._h2 {
+  @include adaptiv-value("margin-bottom", 30, 20, 1);
   @include adaptiv-font(28, 22, 1);
   line-height: 36 / 28 * 100%;
   font-weight: 700;
@@ -103,6 +107,37 @@ hr {
   margin: 0 15px 0 20px;
   @media (min-width: $md4+px) {
     display: none;
+  }
+}
+._bp {
+  position: absolute;
+  top: 36px;
+  right: 70px;
+  width: 149px;
+  height: 149px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #92B115;
+  border-radius: 50%;
+  color: #fff;
+  &-text {
+    margin: 0px 0px 9px -35px;
+    width: 70px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 15px;
+  }
+  &-price {
+    margin-left: 30px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+  &-meter {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
