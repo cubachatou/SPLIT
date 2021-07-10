@@ -110,9 +110,9 @@ body {
     display: flex;
     justify-content: flex-end;
     //----------------------------------<------------------DELETE
-    &:not(:first-child) {
-      display: none;
-    }
+    // &:not(:first-child) {
+    //   display: none;
+    // }
     //----------------------------------<------------------DELETE
   }
   // .main-slider__column
@@ -121,6 +121,7 @@ body {
     &_l {
       flex: 0 0 570 / $maxWidth * 100%;
       padding: 46px 0 100px;
+      background-color: #fff;
     }
     // .main-slider__column_r
     &_r {
@@ -405,7 +406,7 @@ body {
 }
 //======================================================================================
 .main-services {
-  padding: 25px 0 45px;
+  padding: 25px 0 90px;
 		// .main-services__content
 		&__content {
 		}
@@ -507,7 +508,10 @@ body {
 		}
 		// .consultation__wrapper
 		&__wrapper {
-      padding: 60px 65px 35px;
+      @include adaptiv-value("padding-top", 60, 10, 1);
+      @include adaptiv-value("padding-left", 65, 10, 1);
+      @include adaptiv-value("padding-right", 65, 10, 1);
+      @include adaptiv-value("padding-bottom", 35, 30, 1);
       background: #fff;
       border: 2px solid #8B0304;
 		}
@@ -517,42 +521,174 @@ body {
 		}
 		// .consultation__list
 		&__list {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 55px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // display: flex;
+      @include adaptiv-value("gap", 40, 25, 1);
+      @include adaptiv-value("margin-bottom", 55, 40, 1);
+      @media (max-width: $md3+px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+      }
 		}
 		// .consultation__item
 		&__item {
-      flex: 0 1 25%;
-      padding-top: 80px;
+      // flex: 0 1 25%;
+      @include adaptiv-value("padding-top", 80, 55, 1);
       text-align: center;
+      @include adaptiv-font(16, 12, 1);
+      line-height: 22 / 16 * 100%;
       background-repeat: no-repeat;
       background-position: 50% 0%;
+      background-size: auto;
       &_1 {
-        background-image: url(../img/catalog/icons/icon3.svg);
+        background-image: url(../img/consultation/icon3.svg);
+        @media (max-width: $md4+px) {
+          background-image: url(../img/consultation/icon3_small.svg);
+        }
       }
       &_2 {
-        background-image: url(../img/catalog/icons/icon1.svg);
+        background-image: url(../img/consultation/icon1.svg);
+        @media (max-width: $md4+px) {
+          background-image: url(../img/consultation/icon1_small.svg);
+        }
       }
       &_3 {
-        background-image: url(../img/catalog/icons/icon2.svg);
+        background-image: url(../img/consultation/icon2.svg);
+        @media (max-width: $md4+px) {
+          background-image: url(../img/consultation/icon2_small.svg);
+        }
       }
       &_4 {
-        background-image: url(../img/catalog/icons/icon4.svg);
+        background-image: url(../img/consultation/icon4.svg);
+        @media (max-width: $md4+px) {
+          background-image: url(../img/consultation/icon4_small.svg);
+        }
       }
 		}
 		// .consultation__call-wrapper
 		&__call-wrapper {
-      padding: 55px 0 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptiv-value("gap", 80, 20, 1);
+      @include adaptiv-value("padding-top", 55, 20, 1);
+      @include adaptiv-value("padding-bottom", 80, 30, 1);
+      @media (max-width: 488+px) {
+        flex-direction: column;
+      }
 		}
 		// .consultation__call-now
 		&__call-now {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      @include adaptiv-font(24, 20, 1);
+      line-height: 24px;
+      & span {
+        font-weight: 400;
+        @include adaptiv-font(16, 14, 1);
+        line-height: 16px;
+        @media (max-width: $md3+px) {
+          line-height: 22px;
+        }
+      }
+      @media (max-width: 488+px) {
+        text-align: center;
+      }
 		}
-		// .consultation__number
-		&__number {
-		}
+    // .consultation__number
+    &__number {
+      display: flex;
+      align-items: center;
+      @include adaptiv-value("gap", 24, 12.4, 1);
+      @media (any-hover: hover) {
+        &:hover > span {
+            text-decoration: underline;
+        }
+      }
+    }
 		// .consultation__text
 		&__text {
+      text-align: center;
+      @include adaptiv-font(14, 12, 1);
+      line-height: 18 / 14 * 100%;
+      color: $additionalColor;
+		}
+}
+//======================================================================================
+.form-section {
+  @include adaptiv-value("padding-top", 90, 50, 1);
+  @include adaptiv-value("padding-bottom", 90, 42, 1);
+		// .form-section__content
+		&__content {
+		}
+    // .form-section__body
+		&__body {
+      @include adaptiv-value("padding-top", 60, 30, 1);
+      @include adaptiv-value("padding-bottom", 60, 30, 1);
+      @include adaptiv-value("padding-left", 62, 15, 1);
+      @include adaptiv-value("padding-right", 65, 15, 1);
+      background-color: #fff;
+      background-image: url(../img/form-section-bg.png);
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-size: contain;
+      border: 2px solid #CFD5E1;
+      // @media (max-width: $md2+px) {
+      //   background-position: 100% 22vh;
+      // }
+      // @media (max-width: $md4+px) {
+      //   background-position: 100% 100%;
+      //   background-size: 70%;
+      // }
+		}
+		// .form-section__title
+		&__title {
+      margin-bottom: 10px;
+      text-align: left;
+		}
+		// .form-section__sub-title
+		&__sub-title {
+      margin-bottom: 40px;
+      @include adaptiv-font(20, 14, 1);
+      @include adaptiv-value("line-height", 20, 18, 1);
+		}
+		// .form-section__form
+		&__form {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $md2+px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+      }
+      @media (max-width: $md2+px) {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+      @media (max-width: $md3+px) {
+        max-width: none;
+      }
+		}
+		// .form-section__form-line
+		&__form-line {
+      @media (min-width: $md2+px) {
+        flex: 0 0 350 / 980 * 100%;
+      }
+      @media (max-width: $md2+px) {
+        margin-bottom: 10px;
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+		}
+		// .form-section__btn
+		&__btn {
+      @media (min-width: $md2+px) {
+        flex: 0 0 220 / 980 * 100%;
+      }
 		}
 }
 //</ОСНОВНОЙ БЛОК>======================================================================

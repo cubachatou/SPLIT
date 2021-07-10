@@ -5,11 +5,12 @@
 	&__column {
 	}
 	&__line {
-    margin-bottom: 10px;
 	}
 	&__input {
+    @include adaptiv-value("height", 62, 49, 1);
 	}
 	&__button {
+    @include adaptiv-value("height", 62, 45, 1);
 	}
 	&__error {
     padding-top: 10px;
@@ -29,41 +30,75 @@
 	display: inline-flex;
   justify-content: center;
   align-items: center;
-	// padding: 20px 0px;v
   @include adaptiv-value("padding-top", 20, 16, 1);
   @include adaptiv-value("padding-bottom", 20, 16, 1);
   font-weight: 600;
   font-size: 12px;
-  // line-height: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
   background-color: $accentColor;
   border: 1px solid $accentColor;
   transition: all 0.3s ease 0s;
-	@media (min-width: 992px) {
-		&:hover {
-      color: $accentColor;
-      background-color: #fff;
-		}
-	}
+	@media (any-hover: hover) {
+    &:hover {
+    color: $accentColor;
+    background-color: #fff;
+    }
+  }
+  
 	&._fw {
 		width: 100%;
 	}
   &._detailed-single {
-    
   }
   &._detalied {
-    
-  }
-  &._call {
-    
   }
   &._thickness {
     padding: 10px 15px;
   }
   &._footer-send {
+  }
+  &-call {
+    @extend %ic;
+    @extend ._icon-phone;
+    @include adaptiv-value("width", 48.75, 32.15, 1);
+    @include adaptiv-value("height", 48.75, 32.15, 1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accentColor;
+    border-radius: 50%;
+    border-radius: 50%;
+    &::before {
+      @include adaptiv-font(16, 10, 1);
+      color: #fff;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(139, 3, 4, 1);
+      border-radius: 50%;
+      animation: scaling 2s ease-in-out infinite;
+    }
+  }
+  &-call_s {
 
+  }
+}
+@keyframes scaling {
+  0%{
+    transform: scale(1);
+    border: 1px solid rgba(139, 3, 4, 1);
+  }
+  100%{
+    transform: scale(1.5);
+    border: 1px solid rgba(139, 3, 4, 0);
   }
 }
 //</BUTTONS>====================================================================================================
@@ -175,8 +210,7 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-  margin-top: 10px;
-	padding: 15px 25px;
+	padding: 0 25px;
   border: 1px solid #D2D7E1;
   @include adaptiv-font(16, 14, 1);
   color: $additionalColor;

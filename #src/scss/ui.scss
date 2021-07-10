@@ -104,11 +104,12 @@ hr {
   line-height: 20px;
   letter-spacing: 0.04em;
   color: $mainColor;
+  white-space: nowrap;
   &:hover {
     text-decoration: underline;
   }
   &._b {
-
+    margin: 0;
   }
 }
 ._slash {
@@ -142,6 +143,9 @@ hr {
     margin-left: 30px;
     font-size: 28px;
     line-height: 28px;
+    &::after {
+      padding-left: 13px;
+    }
   }
   &-meter {
     margin-left: 5px;
@@ -253,7 +257,8 @@ body.ie {
 	position: relative;
 	overflow: hidden;
 	height: 0;
-	padding-bottom: 56.25%;
+  min-height: 211px;
+	padding-bottom: 35.715%;
 	video,
 	iframe,
 	object,
@@ -263,7 +268,20 @@ body.ie {
 		left: 0;
 		width: 100%;
 		height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
 	}
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include adaptiv-value("width", 94, 54, 0);
+    @include adaptiv-value("height", 94, 54, 0);
+    background: rgba(28, 28, 28, 0.8) url(../img/play.svg) no-repeat center/auto;
+    backdrop-filter: blur(4px);
+    @include adaptiv-value("border-radius", 27, 15, 0);
+  }
 }
 .videobg {
 	video,
@@ -339,6 +357,7 @@ body.ie {
 //====================================================================================================
 ._swiper {
 	overflow: hidden;
+  position: relative;
 	//.swiper-wrapper
 	.swiper-wrapper {
 		width: 100%;
@@ -372,6 +391,31 @@ body.ie {
 }
 .swiper-button-lock {
 	display: none !important;
+}
+.swiper-pagination {
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // position: absolute;
+  // top: 95%;
+  // left: 10.5%;
+  // width: 38px;
+  // height: 0;
+  // padding-top: 0.358%;
+  &-bullet {
+    // width: 5px;
+    // height: 100%;
+    // transition: all 0.3s ease 0s;
+    // background: #C0C4CC;
+    // border-radius: 50%;
+    // cursor: pointer;
+    // &-active {
+    //   background: $mainColor;
+    // }
+  }
 }
 //====================================================================================================
 ._tabs {
