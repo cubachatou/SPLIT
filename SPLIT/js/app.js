@@ -796,37 +796,60 @@ let main_slider = new Swiper(".main-slider", {
   //   delay: 5000,
   //   disableOnInteraction: true,
   // },
-  observer: true,
-  observeParents: true,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  // autoHeight: true,
+
   speed: 800,
   //touchRatio: 0,
   //simulateTouch: false,
   //loop: true,
   preloadImages: false,
   lazy: true,
-  // Dotts
   pagination: {
-    el: ".swiper-pagination",
-    type: 'bullets',
+    el: ".main-slider__pagination",
+    type: "bullets",
     clickable: true,
   },
-  // Arrows
-  // navigation: {
-  //   nextEl: ".about__more .more__item_next",
-  //   prevEl: ".about__more .more__item_prev",
-  // },
   on: {
     lazyImageReady: function () {
       ibg();
     },
   },
-  // And if we need scrollbar
-  //scrollbar: {
-  //	el: '.swiper-scrollbar',
-  //},
+});
+//======================================================================================
+let popular_swiper = new Swiper(".popular__swiper", {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  // autoHeight: true,
+  speed: 800,
+  //touchRatio: 0,
+  //simulateTouch: false,
+  loop: true,
+  preloadImages: false,
+  lazy: true,
+  navigation: {
+    nextEl: ".popular__navigation .popular__arrow_r",
+    prevEl: ".popular__navigation .popular__arrow_l",
+  },
+  on: {
+    lazyImageReady: function () {
+      ibg();
+    },
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    540: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
 });
 
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');

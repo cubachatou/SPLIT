@@ -278,7 +278,7 @@ body.ie {
     transform: translateX(-50%) translateY(-50%);
     @include adaptiv-value("width", 94, 54, 0);
     @include adaptiv-value("height", 94, 54, 0);
-    background: rgba(28, 28, 28, 0.8) url(../img/play.svg) no-repeat center/auto;
+    background: rgba(28, 28, 28, 0.8) url(../img/play.svg) no-repeat center/25%;
     backdrop-filter: blur(4px);
     @include adaptiv-value("border-radius", 27, 15, 0);
   }
