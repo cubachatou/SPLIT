@@ -796,7 +796,6 @@ let main_slider = new Swiper(".main-slider", {
   //   delay: 5000,
   //   disableOnInteraction: true,
   // },
-
   speed: 800,
   //touchRatio: 0,
   //simulateTouch: false,

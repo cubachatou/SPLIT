@@ -43,6 +43,10 @@ hr {
   line-height: 36 / 28 * 100%;
   text-align: center;
 }
+._h6 {
+  @include adaptiv-font(28, 24, 1);
+  @include adaptiv-value("line-height", 28, 29, 1);
+}
 //====================================================================================================
 ._price {
   display: flex;
@@ -112,6 +116,7 @@ hr {
     margin: 0;
   }
 }
+
 ._slash {
   @extend ._phone-number;
   margin: 0 15px 0 20px;
@@ -119,12 +124,13 @@ hr {
     display: none;
   }
 }
+
 ._bp {
   position: absolute;
-  top: 36px;
-  right: 70px;
-  width: 149px;
-  height: 149px;
+  @include adaptiv-value("top", 36, 14, 1);
+  @include adaptiv-value("right", 70, 14, 1);
+  @include adaptiv-value("width", 149, 108, 1);
+  @include adaptiv-value("height", 149, 108, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,24 +139,27 @@ hr {
   border-radius: 50%;
   color: #fff;
   &-text {
-    margin: 0px 0px 9px -35px;
-    width: 70px;
+    @include adaptiv-value("width", 70, 48, 1);
+    @include adaptiv-value("margin-left", -35, -25, 1);
+    margin-bottom: 9px;
     font-weight: bold;
-    font-size: 18px;
+    @include adaptiv-font(18, 14, 1);
     line-height: 15px;
   }
   &-price {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 30px;
-    font-size: 28px;
-    line-height: 28px;
+    @include adaptiv-font(28, 24, 1);
     &::after {
-      padding-left: 13px;
+      @include adaptiv-font(19, 15.5, 1);
+      @include adaptiv-value("padding-left", 13, 5, 1);
     }
   }
   &-meter {
-    margin-left: 5px;
-    font-size: 12px;
-    line-height: 12px;
+    @include adaptiv-value("margin-left", 5, 10, 1);
+    @include adaptiv-font(12, 9, 1);
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
