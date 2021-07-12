@@ -76,14 +76,14 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //@import "datepicker";
 //@import "lightgallery";
-//@import "pagging";
+@import "pagging";
 @import "popup";
 @import "header";
 @import "footer";
 @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
-//<ОСНОВНОЙ БЛОК>====================================================================================================
+//<ОСНОВНОЙ БЛОК>=======================================================================
 .page {
   flex: 1 1 auto;
 }
@@ -265,6 +265,19 @@ body {
     background-repeat: no-repeat;
     background-position: 15px 50%;
     @include adaptiv-value("background-size", 49, 39, 1);
+    &._active {
+      &::before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 3px;
+      background-color: $accentColor;
+      transition: all 0.3s ease 0s;
+      opacity: 1;
+      }
+    }
     &_1 {
       background-image: url(../img/categories/Vibro-pressed-tiles.svg);
     }
@@ -470,7 +483,7 @@ body {
 //======================================================================================
 .main-services {
   padding-top: 25px;
-  @include adaptiv-value("padding-bottom", 90, 15, 1);
+  @include adaptiv-value("padding-bottom", 45, 15, 1);
 		// .main-services__content
 		&__content {
 		}
@@ -567,7 +580,7 @@ body {
 //======================================================================================
 .consultation {
   @include adaptiv-value("padding-top", 45, 15, 1);
-  @include adaptiv-value("padding-bottom", 45, 25, 1);
+  @include adaptiv-value("padding-bottom", 90, 50, 1);
 		// .consultation__content
 		&__content {
 		}
@@ -703,19 +716,16 @@ body {
       @include adaptiv-value("padding-bottom", 60, 30, 1);
       @include adaptiv-value("padding-left", 62, 15, 1);
       @include adaptiv-value("padding-right", 65, 15, 1);
-      background-color: #fff;
-      background-image: url(../img/form-section-bg.png);
-      background-repeat: no-repeat;
-      background-position: 100% 50%;
-      background-size: contain;
+      background: #fff url(../img/form-section-bg.png) no-repeat bottom right / contain;
       border: 2px solid #CFD5E1;
-      // @media (max-width: $md2+px) {
-      //   background-position: 100% 22vh;
-      // }
-      // @media (max-width: $md4+px) {
-      //   background-position: 100% 100%;
-      //   background-size: 70%;
-      // }
+      @media (max-width: $md2+px) {
+        background-image: url(../img/form-section-bg_320.png);
+        background-position-y: 18.5vh !important;
+      }
+      @media (max-width: $md4+px) {
+        background-position-y: 25.5vh !important;
+        background-position-x: 7.5vw !important;
+      }
 		}
 		// .form-section__title
 		&__title {
@@ -724,7 +734,7 @@ body {
 		}
 		// .form-section__sub-title
 		&__sub-title {
-      margin-bottom: 40px;
+      @include adaptiv-value("margin-bottom", 40, 30, 1);
       @include adaptiv-font(20, 14, 1);
       @include adaptiv-value("line-height", 20, 18, 1);
 		}
@@ -769,10 +779,14 @@ body {
 .main-info {
 		// .main-info__content
 		&__content {
+      background-color: #fff;
 		}
-		// .main-info__head
-		&__head {
-      padding: 40px 88px 40px 40px;
+		// .main-info__head-content
+		&__head-content {
+      @include adaptiv-value("padding-top", 40, 30, 1);
+      @include adaptiv-value("padding-right", 88, 0, 1);
+      @include adaptiv-value("padding-bottom", 40, 30, 1);
+      @include adaptiv-value("padding-left", 40, 0, 1);
 		}
 		// .main-info__row
 		&__row {
@@ -782,17 +796,27 @@ body {
 			&_1 {
         gap: 25px;
         align-items: center;
-        margin-bottom: 13px;
+        @include adaptiv-value("margin-bottom", 13, 10, 1);
+        @media (max-width: $md4+px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 21px;
+        }
 			}
 			// .main-info__row_2
 			&_2 {
         flex: 0 1 auto;
         justify-content: space-between;
+        @media (max-width: $md3+px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
 			}
 		}
 		// .main-info__logo
 		&__logo {
-      flex: 0 0 76px;
+      width: 76px;
       height: 35px;
       & img {
         width: 100%;
@@ -808,32 +832,50 @@ body {
       @include adaptiv-value("line-height", 20, 19, 1);
       color: $accentColor;
       white-space: nowrap;
+      @media (max-width: $md3+px) {
+        margin-bottom: 30px;
+      }
 		}
 		// .main-info__schedule
 		&__schedule {
       @extend .info-footer__schedule;
       position: inherit !important;
+      @media (max-width: $md4+px) {
+        margin: 0;
+      }
 		}
 		// .main-info__map
 		&__map {
-      @include adaptiv-value("height", 332, 182, 1);
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      min-height: 211px;
+      padding-bottom: 23.715%;
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: cover;
+      }
+      // @include adaptiv-value("height", 332, 182, 1);
 		}
 		// .main-info__body-content
 		&__body-content {
-      padding: 80px 105px 100px 55px;
-		}
-		// .main-info__text
-		&__text {
-      @include adaptiv-font(16, 11, 1);
-      @include adaptiv-value("line-height", 24, 16, 1);
-      color: $additionalColor;
-			// .main-info__text_1
-			&_1 {
-        @include adaptiv-value("margin-bottom", 40, 30, 1);
-			}
-			// .main-info__text_2
-			&_2 {
-			}
+      @include adaptiv-value("padding-top", 80, 40, 1);
+      @include adaptiv-value("padding-right", 105, 0, 1);
+      @include adaptiv-value("padding-bottom", 100, 65, 1);
+      @include adaptiv-value("padding-left", 55, 0, 1);
+      & p {
+        @include adaptiv-font(16, 11, 1);
+        @include adaptiv-value("line-height", 24, 16, 1);
+        color: $additionalColor;
+        &:not(:last-child) {
+          @include adaptiv-value("margin-bottom", 40, 30, 1);
+        }
+      }
 		}
 		// .main-info__text-title
 		&__text-title {
@@ -844,3 +886,194 @@ body {
 		}
 }
 //</ОСНОВНОЙ БЛОК>======================================================================
+//<КАТАЛОГ>============================================================================
+.catalog {
+		// .catalog__breadcrumbs
+		&__breadcrumbs {
+		}
+
+  & h2 {
+    @include adaptiv-value("padding-top", 5, 10, 1);
+    @include adaptiv-font(20, 16, 1);
+    @include adaptiv-value("line-height", 32, 19, 1);
+    font-weight: 700;
+  }
+  & .catalog-nav__nav {
+    @media (max-width: $md4+px) {
+      display: none;
+    }
+  }
+  & .catalog-nav__select {
+    @media (min-width: $md4+px) {
+      display: none;
+    }
+  }
+}
+.catal {
+		// .catal__content
+		&__content {
+		}
+		& h1 {
+      @extend ._h2;
+		}
+		// .catal__body
+		&__body {
+		}
+}
+.body-catal {
+		// .body-catal__item-wrapper
+		&__item-wrapper {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(4, 1fr);
+      @include adaptiv-value("gap", 30, 8, 1);
+      @media (max-width: $md3+px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: $md4+px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+		}
+		// .body-catal__item
+		&__item {
+      @extend .popular__item;
+		}
+		// .body-catal__pagination
+		&__pagination {
+		}
+}
+//</КАТАЛОГ>============================================================================
+//<КОНТАКТЫ>============================================================================
+.contacts-section {
+  & h1 {
+    @include adaptiv-value("margin-bottom", 40, 25, 1);
+  }
+		// .contacts-section__address-title
+		&__address-title {
+      display: block;
+      @include adaptiv-value("margin-bottom", 20, 10, 1);
+      @include adaptiv-font(28, 24, 1);
+      @include adaptiv-value("line-height", 28, 29, 1);
+		}
+		// .contacts-section__address
+		&__address {
+      display: block;
+      @include adaptiv-value("margin-bottom", 40, 25, 1);
+      color: $accentColor;
+		}
+		// .contacts-section__row
+		&__row {
+      @include adaptiv-value("margin-bottom", 70, 20, 1);
+      display: flex;
+      @include adaptiv-value("gap", 120, 0, 1);
+      @media (max-width: $md3+px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+		}
+		// .contacts-section__img-wrapper
+		&__img-wrapper {
+      flex: 0 1 545px;
+      padding-top: 24.325%;
+      @media (max-width: $md3+px) {
+        flex: 0 0;
+        padding-top: 49.675%;
+      }
+		}
+		// .contacts-section__contacts-block
+		&__contacts-block {
+      display: inline-flex;
+      flex-direction: column;
+		}
+}
+.block-contacts {
+		// .block-contacts__title
+		&__title {
+      display: inline-flex;
+      align-items: center;
+      @include adaptiv-value("margin-bottom", 25, 30, 1);
+      font-weight: 600;
+      @include adaptiv-font(24, 20, 1);
+      &:before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 11px;
+        color: #fff;
+        background-color: $accentColor;
+      }
+		}
+		// .block-contacts__number
+		&__number {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: $additionalColor;
+      &:first-of-type {
+        @include adaptiv-value("margin-bottom", 15, 10, 1);
+      }
+		}
+    // .block-contacts__mail-label
+    &__mail-label {
+      color: $additionalColor;
+    }
+		// .block-contacts__mail
+		&__mail {
+      margin: 30px 0 35px;
+      @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+      }
+      & a {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: underline;
+        color: $mainColor;
+      }
+		}
+    // .block-contacts__btn
+    &__btn {
+      max-width: 327px;
+      padding: 24px 0 24px;
+      @media (max-width: $md3+px) {
+        display: none;
+      }
+    }
+}
+.schedule-section {
+  padding-top: 40px;
+  @include adaptiv-value("margin-bottom", 65, 30, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  @media (max-width: $md3+px) {
+  padding-top: 20px;
+  }
+    @media (max-width: $md3+px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+		// .schedule-section__title
+		&__title {
+      font-weight: 600;
+      @include adaptiv-font(24, 16, 1);
+      @include adaptiv-value("line-height", 24, 19, 1);
+		}
+		// .schedule-section__schedule
+		&__schedule {
+      @extend .info-footer__schedule;
+      position: inherit !important;
+      margin: 0 !important;
+		}
+		// .schedule-section__weekend
+		&__weekend {
+      margin: 0 !important;
+      color: $accentColor;
+		}
+}
+//</КОНТАКТЫ>==========================================================================

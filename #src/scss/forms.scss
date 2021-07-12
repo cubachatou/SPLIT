@@ -50,14 +50,8 @@
 	&._fw {
 		width: 100%;
 	}
-  &._detailed-single {
-  }
-  &._detalied {
-  }
   &._thickness {
     padding: 10px 15px;
-  }
-  &._footer-send {
   }
   &-call {
     @extend %ic;
@@ -106,30 +100,31 @@
 //<SELECT (sel+tab)>====================================================================================================
 .select {
 	position: relative;
+  padding: 10px 0 40px;
 	// .select__item
 	&__item {
 		position: relative;
 	}
 	// .select__title
 	&__title {
-		color: #000;
-		border: 1px solid #d9d9d9;
+		color: $mainColor;
+		border-bottom: 1px solid #E4E6EB;
 		background-color: #fff;
 		cursor: pointer;
-		border-radius: 4px;
-		@media (max-width: $md2+px) {
-			font-size: 18px;
-		}
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		font-size: 14px;
-		height: 30px;
-		padding: 0px 15px;
+    font-weight: 600;
+		height: 63px;
+		padding: 0px 20px 0px 80px;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: row-reverse;
+    &:nth-child(1) {
+      background: url(../img/categories/Vibro-pressed-tiles.svg) no-repeat 20px 50% / 39px;
+    }
 		span {
 			height: 1em;
 			overflow: hidden;
@@ -138,12 +133,16 @@
 			-webkit-box-orient: vertical;
 		}
 		&:before {
-			content: "";
+      font-size: 7px;
+      color: $mainColor;
+			// content: "";
 			display: inline-block;
 			transition: all 0.3s ease 0s;
-			width: 11px;
-			height: 7px;
-			background: url("../img/icons/select.svg") center / 100% no-repeat;
+      @extend %ic;
+      @extend ._icon-arrow_down;
+			// width: 7px;
+			// height: 13px;
+			// background: url("../img/icons/select.svg") center / 100% no-repeat;
 		}
 	}
 	&__input {
@@ -155,30 +154,41 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
+		top: 64px;
+		// border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
 		background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		// border: 1px solid #d9d9d9;
 		border-top: 0;
 		font-size: 14px;
+    font-weight: 600;
 		padding: 10px 0px 5px 0px;
-		@media (max-width: $md2+px) {
-			font-size: 18px;
-		}
 	}
 	// .select__option
 	&__option {
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 24.5px 15px 24.5px 80px;
 		margin: 0px 0px 0px 0px;
+    border-bottom: 1px solid #E4E6EB;
 		@media (min-width: 992px) {
 			&:hover {
 				background: #d9d9d9;
 			}
 		}
+    &:nth-child(1) {
+      background: url(../img/categories/Vibro-pressed-tiles.svg) no-repeat 20px 50% / 39px;
+    }
+    &:nth-child(2) {
+      background: url(../img/categories/Vibrating-tile.svg) no-repeat 20px 50% / 39px;
+    }
+    &:nth-child(3) {
+      background: url(../img/categories/Concrete-products.svg) no-repeat 20px 50% / 39px;
+    }
+    &:nth-child(4) {
+      background: url(../img/categories/Concrete-curbs.svg) no-repeat 20px 50% / 39px;
+    }
 	}
 	&._active {
 		z-index: 5;
