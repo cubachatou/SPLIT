@@ -997,6 +997,25 @@ hr {
   text-decoration: underline;
 }
 
+._phone-s::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 11px;
+  color: #fff;
+  background-color: #8b0304;
+}
+
 .row:after {
   display: block;
   content: "";
@@ -2453,7 +2472,7 @@ body.ie ._ibg img {
   overflow: hidden;
   height: 0;
   min-height: 211px;
-  padding-bottom: 23.715%;
+  padding-top: 23.715%;
 }
 
 .main-info__map iframe {
@@ -2561,25 +2580,6 @@ body.ie ._ibg img {
   margin-bottom: 25px;
   font-weight: 600;
   font-size: 24px;
-}
-
-.block-contacts__title:before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  font-size: 11px;
-  color: #fff;
-  background-color: #8b0304;
 }
 
 .block-contacts__number {
@@ -3380,7 +3380,7 @@ body.ie ._ibg img {
   }
 
   .schedule-section {
-    margin-bottom: calc(30px + 35 * ((100vw - 320px) / 820));
+    margin-bottom: calc(0px + 65 * ((100vw - 320px) / 820));
   }
 
   .schedule-section__title {
@@ -3681,6 +3681,10 @@ body.ie ._ibg img {
     padding-top: 49.675%;
   }
 
+  .contacts-section__contacts-block {
+    padding-top: 30px;
+  }
+
   .block-contacts__mail {
     margin-bottom: 50px;
   }
@@ -3690,7 +3694,7 @@ body.ie ._ibg img {
   }
 
   .schedule-section {
-    padding-top: 20px;
+    padding: 0;
   }
 
   .schedule-section {
@@ -3857,6 +3861,10 @@ body.ie ._ibg img {
   .body-catal__item-wrapper {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts .main-info__map {
+    padding-top: 134.375%;
   }
 }
 
