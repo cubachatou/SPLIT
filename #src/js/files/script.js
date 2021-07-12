@@ -9,7 +9,9 @@ let main_slider = new Swiper(".main-slider", {
   //simulateTouch: false,
   //loop: true,
   preloadImages: false,
-  lazy: true,
+  lazy: {
+    loadPrevNext: true,
+  },
   pagination: {
     el: ".main-slider__pagination",
     type: "bullets",
@@ -33,7 +35,11 @@ let popular_swiper = new Swiper(".popular__swiper", {
   //simulateTouch: false,
   loop: true,
   preloadImages: false,
-  lazy: true,
+  lazy: {
+    loadPrevNext: true,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   navigation: {
     nextEl: ".popular__navigation .popular__arrow_r",
     prevEl: ".popular__navigation .popular__arrow_l",

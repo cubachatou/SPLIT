@@ -1789,6 +1789,9 @@ body.ie ._ibg img {
 }
 
 .main-slider__container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2090,6 +2093,7 @@ body.ie ._ibg img {
 
 .item-popular__img-wrapper {
   padding-top: 100%;
+  margin-bottom: 10px;
 }
 
 .item-popular__description-block {
@@ -2115,7 +2119,7 @@ body.ie ._ibg img {
 .item-popular__title {
   overflow: hidden;
   word-break: break-word;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .item-popular__price-wrapper {
@@ -2583,6 +2587,9 @@ body.ie ._ibg img {
 }
 
 .block-contacts__number {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
@@ -2591,6 +2598,10 @@ body.ie ._ibg img {
 
 .block-contacts__number:first-of-type {
   margin-bottom: 15px;
+}
+
+.block-contacts__number:hover {
+  text-decoration: underline;
 }
 
 .block-contacts__mail-label {
