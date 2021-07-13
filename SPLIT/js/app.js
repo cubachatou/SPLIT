@@ -969,6 +969,23 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+
+
+$(document).ready(function () {
+  $(".portfolio__item").click(function (e) {
+    e.preventDefault();
+    $(".portfolio__item").removeClass("_active");
+    $(this).addClass("_active");
+    let id = $(this).attr("data-id");
+    if (id == 0) {
+      $(".portfolio__img-block").show();
+      return true;
+    }
+    $(".portfolio__img-block").hide();
+    $(".portfolio__item_id_" + id).show();
+  });
+});
+
 let main_slider = new Swiper(".main-slider", {
   // effect: "fade",
   // autoplay: {
@@ -1036,6 +1053,7 @@ let popular_swiper = new Swiper(".popular__swiper", {
   },
 });
 //======================================================================================
+
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {

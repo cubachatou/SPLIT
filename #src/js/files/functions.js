@@ -787,3 +787,4 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+
