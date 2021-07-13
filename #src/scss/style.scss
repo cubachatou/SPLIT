@@ -86,6 +86,9 @@ body {
 //<ОСНОВНОЙ БЛОК>=======================================================================
 .page {
   flex: 1 1 auto;
+  @media (max-width: $md3+px) {
+    padding-top: 74px;
+  }
 }
 ._bg-gray {
   background: #F8F9FB;
@@ -1081,3 +1084,76 @@ body {
 		}
 }
 //</КОНТАКТЫ>==========================================================================
+//=====================================================================================
+.services {
+		// .services__content
+		&__content {
+      background-color: #fff;
+      padding-bottom: 93px;
+		}
+		// .services__block
+		&__block {
+		}
+		// .services__header
+		&__header {
+      position: relative;
+      display: flex;
+      @include adaptiv-value("gap", 60, 0, 1);
+      margin-bottom: 40px;
+      &::before {
+        z-index: 0;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 79.865%;
+        background: $accentColor url(../img/services/services-bg-lines.svg) no-repeat right / auto;
+      }
+      & h1 {
+        flex: 0 1 auto;
+        z-index: 1;
+        flex: 0 0 540 / 1110 * 100%;
+        @include adaptiv-font(48, 20, 1);
+        @include adaptiv-value("line-height", 48, 24, 1);
+        padding: 59px 0 138px;
+        color: #fff;
+      }
+		}
+		// .services__header-img-wrapper
+		&__header-img-wrapper {
+      flex: 0 0 439 / 1110 * 100%;
+      padding-top: 26.397%;
+		}
+		// .services__body
+		&__body {
+      padding: 0 95px;
+      & p {
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+		}
+		// .services__p-center
+		&__p-center {
+      position: relative;
+      padding: 0 95px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 8%;
+        width: 6px;
+        height: 90%;
+        background-color: $accentColor;
+      }
+		}
+		// .services__body-img-wrapper
+		&__body-img-wrapper {
+      padding-top: 48.37%;
+      margin-top: 93px;
+      margin-bottom: 70px;
+		}
+}
+//=====================================================================================
