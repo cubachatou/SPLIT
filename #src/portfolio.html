@@ -6,8 +6,107 @@
 	<body>
 		<div class="wrapper">
 			@@include('_header.html',{})
-			<main class="page services">
-        
+			<main class="page portfolio _bg-gray">
+        <section class="portfolio__content _container">
+          <div class="contacts-breadcrumbs _breadcrumbs">
+            <ul class="breadcrumbs-catalog__list">
+              <li class="breadcrumbs-catalog__item"><a href="index.html">Главная</a></li>
+              <li><span>&nbsp;—&nbsp;</span></li>
+              <li class="breadcrumbs-catalog__item">Портфолио</li>
+            </ul>
+          </div>
+          <h1 class="_h2">Портфолио наших работ</h1>
+          <ul class="portfolio__list">
+            <li class="portfolio__item _active">Все</li>
+            <li class="portfolio__item">Австрийсикй брук</li>
+            <li class="portfolio__item">Квадрат</li>
+            <li class="portfolio__item">Кирпичик</li>
+            <li class="portfolio__item">Ромб</li>
+            <li class="portfolio__item">Старая площадь</li>
+            <li class="portfolio__item">Старый город</li>
+            <li class="portfolio__item">Столбик</li>
+          </ul>
+          <div class="portfolio__img-block-area">
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio1.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio2.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio3.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio4.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio5.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio6.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio7.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio8.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio1.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio2.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio3.jpg" alt="">
+            </div>
+            <div class="portfolio__img-block _ibg">
+              <img src="img/portfolio/folio4.jpg" alt="">
+            </div>
+          </div>
+        </section>
+        <section class="form-section _bg-gray">
+          <div class="form-section__content _container">
+            <div class="form-section__body">
+              <h5 class="form-section__title _h5">Остались вопросы?</h5>
+              <p class="form-section__sub-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
+              <form action="#" class="form-section__form form">
+                <div class="form-section__form-line form__line form__line_name">
+                  <input autocomplete="off" type="text" name="form[]"  data-value="Введите имя" class="form__input input _req">
+                </div>
+                <div class="form-section__form-line form__line form__line_number">
+                  <input autocomplete="off" type="text" name="form[]"  data-value="+380 (  _ _  )  _ _ _   _ _   _ _" class="form__input input _req _phone">
+                </div>
+                <button type="submit" class="form-section__btn form__button btn">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="main-info">
+          <div class="main-info__content">
+            <div class="main-info__head _container">
+              <div class="main-info__head-content">
+                <div class="main-info__row main-info__row_1">
+                  <div class="main-info__logo"><img src="img/icons/logo.svg" alt=""></div>
+                  <h6 class="main-info__title _h6">Наш магазин по адрессу:</h6>
+                </div>
+                <div class="main-info__row main-info__row_2">
+                  <span class="main-info__address">г. Херсон, Ул.Газовая,8</span>
+                  <span class="main-info__schedule">
+                    <p>Пн-Пт:&nbsp;&nbsp;8:30 — 17:00</p>
+                    <span>/</span>
+                    <p>Сб:&nbsp;&nbsp;8:30 — 13:00</p>
+                    <span>/</span>
+                    <p>Вс:&nbsp;&nbsp;Выходной</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="main-info__map" id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21906.178950911344!2d32.556937797267565!3d46.66088348676349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c629151c6301de2!2z0KLRgNC-0YLRg9Cw0YDQvdCw0Y8g0L_Qu9C40YLQutCwIFNwbGl0INCl0LXRgNGB0L7QvQ!5e0!3m2!1sru!2sua!4v1626010349969!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </section>
 			</main>
 			@@include('_footer.html',{})
 		</div>

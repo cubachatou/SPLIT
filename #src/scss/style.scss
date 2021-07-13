@@ -1086,13 +1086,36 @@ body {
 //</КОНТАКТЫ>==========================================================================
 //=====================================================================================
 .services {
+  & h1 {
+    z-index: 1;
+    flex: 0 1 540 / 1110 * 100%;
+    display: flex;
+    align-items: center;
+    @include adaptiv-font(48, 20, 1);
+    @include adaptiv-value("line-height", 48, 24, 1);
+    @include adaptiv-value("padding-top", 59, 0, 1);
+    @include adaptiv-value("padding-bottom", 138, 0, 1);
+    color: #fff;
+    @media (max-width: $md4+px) {
+      color: $mainColor;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+  }
+  & h2 {
+    margin-top: 32px;
+  }
 		// .services__content
 		&__content {
-      background-color: #fff;
-      padding-bottom: 93px;
 		}
 		// .services__block
 		&__block {
+      background-color: #fff;
+      @include adaptiv-value("padding-bottom", 93, 28, 1);
+      @media (max-width: $md4+px) {
+          margin: 0 -8px;
+          background-color: #F8F9FB;
+        }
 		}
 		// .services__header
 		&__header {
@@ -1108,52 +1131,156 @@ body {
         left: 0px;
         width: 100%;
         height: 79.865%;
-        background: $accentColor url(../img/services/services-bg-lines.svg) no-repeat right / auto;
-      }
-      & h1 {
-        flex: 0 1 auto;
-        z-index: 1;
-        flex: 0 0 540 / 1110 * 100%;
-        @include adaptiv-font(48, 20, 1);
-        @include adaptiv-value("line-height", 48, 24, 1);
-        padding: 59px 0 138px;
-        color: #fff;
+        background: $accentColor;
+        @media (min-width: $md4+px) {
+          background: $accentColor url(../img/services/services-bg-lines.svg) no-repeat right / auto;
+        }
       }
 		}
 		// .services__header-img-wrapper
 		&__header-img-wrapper {
       flex: 0 0 439 / 1110 * 100%;
       padding-top: 26.397%;
+      @media (max-width: $md4+px) {
+        &_laying {
+          flex: 0 0 95%;
+          padding-top: 60%;
+        }
+        &_production {
+          flex: 0 0 85%;
+          padding-top: 53.75%;
+        }
+        &_delivery {
+          flex: 0 0 100%;
+          padding-top: 61.25%;
+        }
+        &_departure {
+          flex: 0 0 71%;
+          padding-top: 53.44%;
+        }
+      }
+      @media (max-width: $md4+px) {
+        // flex: 0 0 100%;
+        // padding-top: 60%;
+      }
 		}
 		// .services__body
 		&__body {
-      padding: 0 95px;
+      @include adaptiv-value("padding-right", 95, 0, 1);
+      @include adaptiv-value("padding-left", 95, 0, 1);
       & p {
-        margin-bottom: 25px;
         font-size: 16px;
         line-height: 24px;
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+        @media (max-width: $md4+px) {
+          color: $additionalColor;
+        }
+      }
+      @media (max-width: $md4+px) {
+        padding: 0 8px;
       }
 		}
-		// .services__p-center
-		&__p-center {
-      position: relative;
-      padding: 0 95px;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 8%;
-        width: 6px;
-        height: 90%;
-        background-color: $accentColor;
+		// .services__p-centered
+		&__p-centered {
+      @include adaptiv-value("padding-right", 95, 0, 1);
+      @include adaptiv-value("padding-left", 62, 0, 1);
+      & p {
+        position: relative;
+        @include adaptiv-value("padding-left", 27, 23, 1);
+        &::before {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0px;
+          // left: 0%;
+          width: 6px;
+          height: 90%;
+          background-color: $accentColor;
+          @media (max-width: $md4+px) {
+            top: -5px;
+            height: 95%;
+          }
+        }
       }
 		}
 		// .services__body-img-wrapper
 		&__body-img-wrapper {
       padding-top: 48.37%;
       margin-top: 93px;
-      margin-bottom: 70px;
+      @include adaptiv-value("margin-top", 93, 23, 1);
+      @include adaptiv-value("margin-bottom", 70, 50, 1);
+		}
+}
+//=====================================================================================
+//=====================================================================================
+.portfolio {
+  & h1 {
+    @include adaptiv-value("margin-top", 30, 10, 1);
+    margin-bottom: 20px;
+  }
+		// .portfolio__content
+		&__content {
+		}
+		// .portfolio__list
+		&__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      @include adaptiv-value("margin-bottom", 35, 20, 1);
+      @include adaptiv-value("padding-left", 52.5, 12.5, 1);
+      @include adaptiv-value("padding-right", 52.5, 12.5, 1);
+      background-color: #fff;
+      overflow: auto;
+		}
+		// .portfolio__item
+		&__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @include adaptiv-value("height", 57, 47, 1);
+      padding: 0 12.5px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $additionalColor;
+      white-space: nowrap;
+      cursor: pointer;
+      &:hover {
+        color: $mainColor;
+      }
+      &._active {
+        color: $mainColor;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          transform: translateY(-3px);
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background-color: $accentColor;
+        }
+      }
+		}
+		// .portfolio__img-block-area
+		&__img-block-area {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @include adaptiv-value("gap", 30, 10, 1);
+      @media (max-width: $md2+px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: $md4+px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+		}
+		// .portfolio__img-block
+		&__img-block {
+      padding-top: 100%;
 		}
 }
 //=====================================================================================

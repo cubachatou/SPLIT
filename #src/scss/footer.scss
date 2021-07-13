@@ -1,5 +1,10 @@
 //====================================================================================================
 .footer {
+  & .menu__nav {
+    @media (max-width: $md3+px) {
+      display: none;
+    }
+  }
 		// .footer__content
 		&__content {
       display: flex;
