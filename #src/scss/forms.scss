@@ -50,9 +50,6 @@
 	&._fw {
 		width: 100%;
 	}
-  &._thickness {
-    padding: 10px 15px;
-  }
   &-call {
     @extend %ic;
     @extend ._icon-phone;

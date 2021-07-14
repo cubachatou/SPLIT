@@ -985,7 +985,12 @@ $(document).ready(function () {
     $(".portfolio__item_id_" + id).show();
   });
 });
-
+//======================================================================================
+lightGallery(document.getElementById("animated-thumbnails"), {
+  thumbnail: true,
+  mode: "lg-fade",
+});
+//======================================================================================
 let main_slider = new Swiper(".main-slider", {
   // effect: "fade",
   // autoplay: {
