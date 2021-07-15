@@ -132,6 +132,7 @@
 		}
 		// .menu__list
 		&__list {
+      flex: 1 1 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -203,13 +204,17 @@
 }
 .lang-dropdown {
   position: relative;
+  cursor: pointer;
+  &._active .lang-dropdown__btn::after {
+    transform: rotate(-180deg);
+  }
   @media (max-width: $md3+px) {
     display: flex;
     justify-content: center;
   }
-  cursor: pointer;
 		// .lang-dropdown__btn
 		&__btn {
+      position: relative;
       display: flex;
       align-items: center;
       font-weight: 600;
@@ -219,9 +224,6 @@
         font-size: 4px;
         margin-left: 6px;
         transition: all 0.3s ease 0s;
-        &._active {
-          transform: rotate(-180deg);
-        }
       }
       @media (max-width: $md3+px) {
         justify-content: center;
@@ -231,23 +233,53 @@
 		}
 		// .lang-dropdown__list
 		&__list {
-      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 0%;
+      left: 0px;
       font-weight: 600;
       font-size: 14px;
       line-height: 14px;
+      transition: all 0.3s ease 0s;
+      &._active {
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+        @media (max-width: $md3+px) {
+          top: 22.5px;
+          gap: 200px;
+        }
+      }
       @media (max-width: $md3+px) {
         position: absolute;
-        top: 85%;
-        left: 48%;
-        transform: translateX(-50%) translateY(-50%);
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0;
       }
 		}
 		// .lang-dropdown__item
 		&__item {
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
 		}
 		// .lang-dropdown__link
 		&__link {
       color: $mainColor;
+      font-size: 11px;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          padding-left: 5px;
+        }
+      }
+      
 			// .lang-dropdown__link_ua
 			&_ua {
 			}
@@ -326,6 +358,22 @@
 		&__social {
       color: $mainColor;
 		}
+    &__messangers {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 20.3px;
+      height: 20.3px;
+      color: #fff;
+      border-radius: 50%;
+      &_viber {
+        margin-right: 6px;
+        background-color: #9069AE;
+      }
+      &_telegram {
+        background-color: #429ADF;
+      }
+    }
 }
 //====================================================================================================
 //Burger

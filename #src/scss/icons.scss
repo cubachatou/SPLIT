@@ -30,31 +30,15 @@
 }
 
 ._icon-viber:before {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 6px;
   padding-right: 1px;
   content: "\e90c";
   font-size: 9px;
-  color: #fff;
-  width: 20.3px;
-  height: 20.3px;
-  background-color: #9069AE;
-  border-radius: 50%;
+  
 }
 ._icon-telegram:before {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding-right: 2px;
   content: "\e90d";
   font-size: 11.9px;
-  color: #fff;
-  width: 20.3px;
-  height: 20.3px;
-  background-color: #429ADF;
-  border-radius: 50%;
 }
 ._icon-uah:after {
   content: "\e90b";

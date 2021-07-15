@@ -3,6 +3,12 @@ hr {
   background-color: #D2D6E1;
   width: 100%;
   height: 1px;
+  &._pc-hidden {
+    margin-bottom: 20px !important;
+    @media (min-width: $md3+px) {
+      display: none;
+    }
+  }
 }
 ._hr {
   @media (max-width: $md3+px) {
@@ -169,6 +175,8 @@ hr {
     align-items: center;
     @include adaptiv-value("padding-top", 15, 10, 1);
     @include adaptiv-value("padding-bottom", 20, 10, 1);
+    white-space: nowrap;
+    overflow: auto;
     & li {
       font-size: 12px;
       line-height: 15px;
@@ -204,8 +212,8 @@ hr {
 ._criteria {
   display: inline-block;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
+  @include adaptiv-font(16, 14, 0);
+  line-height: 19 / 16 * 100%;
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 

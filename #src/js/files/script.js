@@ -12,6 +12,16 @@ $(document).ready(function () {
     $(".portfolio__item_id_" + id).show();
   });
 });
+
+//=====================================================================================
+let langMenu = document.querySelector(".menu__lang-dropdown");
+if (langMenu != null) {
+  let langList = document.querySelector(".lang-dropdown__list");
+	langMenu.addEventListener("click", function (e) {
+    langMenu.classList.toggle("_active");
+    langList.classList.toggle("_active");
+  });
+};
 //======================================================================================
 lightGallery(document.getElementById("animated-thumbnails"), {
   thumbnail: true,
@@ -85,3 +95,25 @@ let popular_swiper = new Swiper(".popular__swiper", {
   },
 });
 //======================================================================================
+let productMainSlider = new Swiper(".product__slider_big", {
+  spaceBetween: 10,
+  loop: true,
+  loopedSlides: 4,
+});
+let productGallerySlider = new Swiper(".product__slider_gallery", {
+  observer: true,
+  observeParents: true,
+  spaceBetween: 10,
+  // centeredSlides: true,
+  slidesPerView: 4,
+  // touchRatio: 0.2,
+  slideToClickedSlide: true,
+  loop: true,
+  loopedSlides: 4,
+  navigation: {
+    nextEl: ".gallery-product__arrow_next",
+    prevEl: ".gallery-product__arrow_prev",
+  },
+});
+productMainSlider.controller.control = productGallerySlider;
+productGallerySlider.controller.control = productMainSlider;

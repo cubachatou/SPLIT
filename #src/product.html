@@ -25,20 +25,53 @@
           </div>
           <div class="product__body">
             <div class="product__column product__column_l">
-              <div class="product__img-wrapper _ibg">
-                <img src="img/catalog/content/catalog-item.png" alt="">
-              </div>
-              <div class="product__navigation navigation-product">
-                <div class="navigation-product__arrow navigation-product__arrow_l _icon-arrow_gallery"></div>
-                <ul class="navigation-product__list">
-                  <li class="navigation-product__item _ibg _active"><img src="img/catalog/content/catalog-item_small1.png" alt=""></li>
-                  <li class="navigation-product__item _ibg"><img src="img/catalog/content/catalog-item_small2.png" alt=""></li>
-                  <li class="navigation-product__item _ibg"><img src="img/catalog/content/catalog-item_small3.png" alt=""></li>
-                  <li class="navigation-product__item _ibg"><img src="img/catalog/content/catalog-item_small1.png" alt=""></li>
+              <div class="swiper-container product__slider_big _swiper">
+                <ul class="swiper-wrapper">
+                  <li class="product__img-wrapper _ibg swiper-slide">
+                      <img src="img/product/catalog-item1.png" alt="">
+                  </li>
+                  <li class="product__img-wrapper _ibg swiper-slide">
+                      <img src="img/product/catalog-item2.png" alt="">
+                  </li>
+                  <li class="product__img-wrapper _ibg swiper-slide">
+                      <img src="img/product/catalog-item3.png" alt="">
+                  </li>
+                  <li class="product__img-wrapper _ibg swiper-slide">
+                      <img src="img/product/catalog-item4.png" alt="">
+                  </li>
                 </ul>
-                <div class="navigation-product__arrow navigation-product__arrow_r _icon-arrow_gallery"></div>
               </div>
-              <a href="tel:+380665670204" class="product__callback-block">
+              <div class="gallery-product__wrapper">
+                <div class="gallery-product__arrow gallery-product__arrow_prev _icon-arrow_gallery"></div>
+                <div class="swiper-container product__slider_gallery gallery-product _swiper">
+                  <ul class="gallery-product__list swiper-wrapper">
+                    <li class="gallery-product__item _ibg swiper-slide">
+                      <img src="img/product/catalog-item1_small.png" alt="">
+                    </li>
+                    <li class="gallery-product__item _ibg swiper-slide ">
+                      <img src="img/product/catalog-item2_small.png" alt="">
+                    </li>
+                    <li class=" gallery-product__item _ibg swiper-slide">
+                      <img src="img/product/catalog-item3_small.png" alt="">
+                    </li>
+                    <li class="gallery-product__item _ibg swiper-slide">
+                      <img src="img/product/catalog-item4_small.png" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="gallery-product__arrow gallery-product__arrow_next _icon-arrow_gallery"></div>
+              </div>
+              <!-- <div class="product__navigation navigation-product">
+                <div class="navigation-product__arrow navigation-product__arrow_l _icon-arrow_gallery"></div>
+                <div class="navigation-product__list">
+                  <div class="navigation-product__item _ibg _active"><img src="img/product/catalog-item1_small.png" alt=""></div>
+                  <div class="navigation-product__item _ibg"><img src="img/product/catalog-item2_small.png" alt=""></div>
+                  <div class="navigation-product__item _ibg"><img src="img/product/catalog-item3_small.png" alt=""></div>
+                  <div class="navigation-product__item _ibg"><img src="img/product/catalog-item4_small.png" alt=""></div>
+                </div>
+                <div class="navigation-product__arrow navigation-product__arrow_r _icon-arrow_gallery"></div>
+              </div> -->
+              <a href="tel:+380665670204" data-da=".product__body,991,last" class="product__callback-block">
                 <p class="product__callback-text">Повоните сейчас<span>И запишитесь на консультацию</span></p>
                 <span class="product__callback-number">(066) 567-02-04</span>
               </a>
@@ -89,6 +122,7 @@
                 <span class="product__weight-title _criteria">Вес:<span>65kg *</span></span>
                 <span class="product__weight-span">*Вес указан за 100 штук</span>
               </div>
+              <hr class="_pc-hidden">
               <div class="product__submit-block">
                 <span class="product__price-title">Цена:<span>За 1 м.кв</span></span>
                 <span class="product__price _icon-uah">102</span>
@@ -201,7 +235,9 @@
             <div class="main-info__head _container">
               <div class="main-info__head-content">
                 <div class="main-info__row main-info__row_1">
-                  <div class="main-info__logo"><img src="img/icons/logo.svg" alt=""></div>
+                  <div class="main-info__logo">
+                    <!-- <img src="img/icons/logo.svg" alt=""> -->
+                  </div>
                   <h6 class="main-info__title _h6">Наш магазин по адрессу:</h6>
                 </div>
                 <div class="main-info__row main-info__row_2">
