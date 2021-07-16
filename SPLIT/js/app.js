@@ -985,7 +985,6 @@ $(document).ready(function () {
     $(".portfolio__item_id_" + id).show();
   });
 });
-
 //=====================================================================================
 let langMenu = document.querySelector(".menu__lang-dropdown");
 if (langMenu != null) {
@@ -1001,20 +1000,9 @@ lightGallery(document.getElementById("animated-thumbnails"), {
   mode: "lg-fade",
 });
 //======================================================================================
-let main_slider = new Swiper(".main-slider", {
-  // effect: "fade",
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: true,
-  // },
+let mainTextSlider = new Swiper(".main-slider__text-slider", {
   speed: 800,
-  //touchRatio: 0,
-  //simulateTouch: false,
-  //loop: true,
-  preloadImages: false,
-  lazy: {
-    loadPrevNext: true,
-  },
+  spaceBetween: 600,
   pagination: {
     el: ".main-slider__pagination",
     type: "bullets",
@@ -1026,6 +1014,30 @@ let main_slider = new Swiper(".main-slider", {
     },
   },
 });
+
+let mainImageSlider = new Swiper(".main-slider__img-slider", {
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
+  speed: 800,
+  preloadImages: false,
+  lazy: true,
+  // pagination: {
+  //   el: ".main-slider__pagination",
+  //   type: "bullets",
+  //   clickable: true,
+  // },
+  on: {
+    lazyImageReady: function () {
+      ibg();
+    },
+  },
+});
+
+mainTextSlider.controller.control = mainImageSlider;
+mainImageSlider.controller.control = mainTextSlider;
 //======================================================================================
 let popular_swiper = new Swiper(".popular__swiper", {
   observer: true,
@@ -1435,7 +1447,7 @@ function selects_update_all() {
 	}
 }
 
-//Placeholers
+//Placeholders
 let inputs = document.querySelectorAll('input[data-value],textarea[data-value]');
 inputs_init(inputs);
 
@@ -1471,11 +1483,11 @@ function inputs_init(inputs) {
 				}
 				if (input.classList.contains('_phone')) {
 					//'+7(999) 999 9999'
-					//'+38(999) 999 9999'
+					// '+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
 					Inputmask("+380 (  9 9  )  9 9 9   9 9   9 9", {
-            //"placeholder": '',
+            // placeholder: "",
             clearIncomplete: true,
             clearMaskOnLostFocus: true,
             onincomplete: function () {
@@ -1553,63 +1565,6 @@ function input_clear_mask(input, input_g_value) {
 	input.inputmask.remove();
 	input.value = input_g_value;
 	input_focus_remove(input);
-}
-
-//QUANTITY
-let quantityButtons = document.querySelectorAll('.quantity__button');
-if (quantityButtons.length > 0) {
-	for (let index = 0; index < quantityButtons.length; index++) {
-		const quantityButton = quantityButtons[index];
-		quantityButton.addEventListener("click", function (e) {
-			let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
-			if (quantityButton.classList.contains('quantity__button_plus')) {
-				value++;
-			} else {
-				value = value - 1;
-				if (value < 1) {
-					value = 1
-				}
-			}
-			quantityButton.closest('.quantity').querySelector('input').value = value;
-		});
-	}
-}
-
-//RANGE
-const priceSlider = document.querySelector('.price-filter__slider');
-if (priceSlider) {
-
-	let textFrom = priceSlider.getAttribute('data-from');
-	let textTo = priceSlider.getAttribute('data-to');
-
-	noUiSlider.create(priceSlider, {
-		start: [0, 200000],
-		connect: true,
-		tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
-		range: {
-			'min': [0],
-			'max': [200000]
-		}
-	});
-
-	/*
-	const priceStart = document.getElementById('price-start');
-	const priceEnd = document.getElementById('price-end');
-	priceStart.addEventListener('change', setPriceValues);
-	priceEnd.addEventListener('change', setPriceValues);
-	*/
-
-	function setPriceValues() {
-		let priceStartValue;
-		let priceEndValue;
-		if (priceStart.value != '') {
-			priceStartValue = priceStart.value;
-		}
-		if (priceEnd.value != '') {
-			priceEndValue = priceEnd.value;
-		}
-		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-	}
 }
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');

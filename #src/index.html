@@ -7,93 +7,73 @@
 		<div class="wrapper">
 			@@include('_header.html',{})
 			<main class="page main">
-        <section class="main-slider swiper-container _swiper">
-          <div class="swiper-wrapper">
-            <div class="main-slider__content main-slider__container swiper-slide">
-              <div class="main-slider__column main-slider__column_l">
-                <div class="main-slider__textarea">
-                  <span class="main-slider__limited">Остатки-сладки!</span>
-                  <h1 class="main-slider__title _h1">Тротуарная плитка в небольших количествах с приятной скидкой</h1>
-                  <!-- <span class="main-slider__addinfo">С эффектами колормикса</span> -->
-                  <div class="main-slider__btn-wrapper">
-                    <a href="#" class="main-slider__btn btn _fw">Подробнее</a>
+        <section class="main-slider">
+          <div class="main-slider__content">
+            <div dir="rtl" class="main-slider__text-slider swiper-container _swiper">
+              <div class="swiper-wrapper">
+                <div dir="ltr" class="swiper-slide">
+                  <div class="main-slider__textarea">
+                    <span class="main-slider__limited">Остатки-сладки!</span>
+                    <h1 class="_h1">Тротуарная плитка<br>в небольших количествах<br>с приятной скидкой</h1>
+                    <!-- <span class="main-slider__addinfo">С эффектами колормикса</span> -->
                   </div>
+                  <a href="#" class="main-slider__btn btn">Подробнее</a>
                 </div>
-              </div>
-              <div class="main-slider__column main-slider__column_r _ibg">
-                <img src="img/main-content/image3.webp" alt="" class="main-slider__img">
-                <div class="_bp">
-                  <span class="_bp-text">Лучшая цена</span>
-                  <span class="_bp-price _icon-uah">145</span>
-                  <span class="_bp-meter">За 1 м<sup>2</sup></span>
+                <div dir="ltr" class="swiper-slide">
+                  <div class="main-slider__textarea">
+                    <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
+                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "Брук"</h1>
+                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                  </div>
+                  <a href="#" class="main-slider__btn btn">Подробнее</a>
+                </div>
+                <div dir="ltr" class="swiper-slide">
+                  <div class="main-slider__textarea">
+                    <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
+                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "кирпич"</h1>
+                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                  </div>
+                  <a href="#" class="main-slider__btn btn">Подробнее</a>
+                </div>
+                <div dir="ltr" class="swiper-slide">
+                  <div class="main-slider__textarea">
+                    <span class="main-slider__limited">Остатки-сладки!</span>
+                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "Патио"</h1>
+                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                  </div>
+                  <a href="#" class="main-slider__btn btn">Подробнее</a>
                 </div>
               </div>
             </div>
-            <div class="main-slider__content main-slider__container swiper-slide">
-              <div class="main-slider__column main-slider__column_l">
-                <div class="main-slider__textarea">
-                  <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
-                  <h1 class="main-slider__title _h1">Новинка!<br>Тротуарная плитка "Брук"</h1>
-                  <span class="main-slider__addinfo">С эффектами колормикса</span>
-                  <div class="main-slider__btn-wrapper">
-                    <a href="#" class="main-slider__btn btn _fw">Подробнее</a>
+            <div class="main-slider__img-slider swiper-container _swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="main-slider__img-wrapper _ibg">
+                    <img data-src="img/main-content/image3.jpg" class="swiper-lazy" alt="">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </div>
-              </div>
-              <div class="main-slider__column main-slider__column_r _ibg">
-                <img data-src="img/main-content/image2.webp" alt="" class="main-slider__img swiper-lazy">
-                <div class="swiper-lazy-preloader"></div>
-                <div class="_bp">
-                  <span class="_bp-text">Лучшая цена</span>
-                  <span class="_bp-price _icon-uah">145</span>
-                  <span class="_bp-meter">За 1 м<sup>2</sup></span>
-                </div>
-              </div>
-            </div>
-            <div class="main-slider__content main-slider__container swiper-slide">
-              <div class="main-slider__column main-slider__column_l">
-                <div class="main-slider__textarea">
-                  <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
-                  <h1 class="main-slider__title _h1">Новинка!<br>Тротуарная плитка "кирпич"</h1>
-                  <span class="main-slider__addinfo">С эффектами колормикса</span>
-                  <div class="main-slider__btn-wrapper">
-                    <a href="#" class="main-slider__btn btn _fw">Подробнее</a>
+                <div class="swiper-slide">
+                  <div class="main-slider__img-wrapper _ibg">
+                    <img data-src="img/main-content/image2.jpg" class="swiper-lazy" alt="">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </div>
-              </div>
-              <div class="main-slider__column main-slider__column_r _ibg">
-                <img data-src="img/main-content/image1.webp" alt="" class="main-slider__img swiper-lazy">
-                <div class="swiper-lazy-preloader"></div>
-                <div class="_bp">
-                  <span class="_bp-text">Лучшая цена</span>
-                  <span class="_bp-price _icon-uah">145</span>
-                  <span class="_bp-meter">За 1 м<sup>2</sup></span>
-                </div>
-              </div>
-            </div>
-            <div class="main-slider__content main-slider__container swiper-slide">
-              <div class="main-slider__column main-slider__column_l">
-                <div class="main-slider__textarea">
-                  <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
-                  <h1 class="main-slider__title _h1">Новинка!<br>Тротуарная плитка "патио"</h1>
-                  <span class="main-slider__addinfo">С эффектами колормикса</span>
-                  <div class="main-slider__btn-wrapper">
-                    <a href="#" class="main-slider__btn btn _fw">Подробнее</a>
+                <div class="swiper-slide">
+                  <div class="main-slider__img-wrapper _ibg">
+                    <img data-src="img/main-content/image1.jpg" class="swiper-lazy" alt="">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </div>
-              </div>
-              <div class="main-slider__column main-slider__column_r _ibg">
-                <img data-src="img/main-content/image4.webp" alt="" class="main-slider__img swiper-lazy">
-                <div class="swiper-lazy-preloader"></div>
-                <div class="_bp">
-                  <span class="_bp-text">Лучшая цена</span>
-                  <span class="_bp-price _icon-uah">145</span>
-                  <span class="_bp-meter">За 1 м<sup>2</sup></span>
+                <div class="swiper-slide">
+                  <div class="main-slider__img-wrapper _ibg">
+                    <img data-src="img/main-content/image4.jpg" class="swiper-lazy" alt="">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="main-slider__pagination"></div>
         </section>
         <section class="catalog-nav catalog-nav_main _bg-gray">
           <div class="catalog-nav__content _container">

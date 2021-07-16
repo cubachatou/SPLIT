@@ -96,46 +96,62 @@ body {
 }
 //======================================================================================
 .main-slider {
-  // .main-slider__content
-  &__content {
-    // flex: 0 0 100%;
+  & h1 {
+
   }
-  // .main-slider__container
-  &__container {
-    flex: 0 0 100%;
-    display: flex;
-    @media (max-width: $md2+px) {
+		// .main-slider__content
+		&__content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+		}
+		// .main-slider__text-slider
+		&__text-slider {
+      display: flex;
+      @include adaptiv-value("padding-left", 145, 0, 1);
+      padding-right: 60px;
+      & .swiper-slide {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease 0s, visibility 1s ease 0s;
+        &-active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+		// .main-slider__textarea
+		&__textarea {
+      display: flex;
       flex-direction: column;
-    }
-  }
-  // .main-slider__column
-  &__column {
-    // .main-slider__column_l
-    &_l {
-      @media (min-width: $md2+px) {
-        order: 0;
-        flex: 0 1 570 / $maxWidth * 100%;
-        margin-left: auto;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      order: 1;
-      padding: 0px 15px;
-      padding-top: 45px;
-      @include adaptiv-value("padding-bottom", 100, 15, 1);
-      background-color: #fff;
-      @media (max-width: $md2+px) {
-        margin-top: auto;
-      }
-    }
-    // .main-slider__column_r
-    &_r {
-      @media (min-width: $md2+px) {
-        flex: 0 0 685 / 1400 * 100%;
-        padding-top: 30.929%;
-      }
-      position: relative;
-      padding-top: 63.75%;
+      @include adaptiv-value("gap", 20, 10, 1);
+      @include adaptiv-value("margin-bottom", 40, 25, 1);
+		}
+		// .main-slider__limited
+		&__limited {
+      font-weight: 600;
+      @include adaptiv-font(24, 16, 1);
+      line-height: 29 / 24 * 100%;
+      color: $accentColor;
+		}
+		// .main-slider__addinfo
+		&__addinfo {
+      margin-bottom: 10px;
+      @include adaptiv-font(16, 14, 1);
+      line-height: 24 / 16 * 100%;
+      color: $additionalColor;
+		}
+		// .main-slider__btn
+		&__btn {
+      padding: 19px 60px;
+		}
+		// .main-slider__img-slider
+		&__img-slider {
+      flex: 0 0 685 / $maxWidth * 100%;
+		}
+		// .main-slider__img-wrapper
+		&__img-wrapper {
+      padding-top: 63.213%;
       &::before {
         content: "";
         z-index: 1;
@@ -163,74 +179,6 @@ body {
         }
       }
     }
-  }
-  // .main-slider__textarea
-  &__textarea {
-    @media (min-width: $md2+px) {
-      @include adaptiv-value("padding-right", 60, 0, 1);
-    }
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  // .main-slider__limited
-  &__limited {
-    @include adaptiv-value("margin-bottom", 20, 10, 1);
-    font-weight: 600;
-    @include adaptiv-font(24, 16, 1);
-    line-height: 29 / 24 * 100%;
-    color: $accentColor;
-  }
-  // .main-slider__title
-  &__title {
-    margin-bottom: 20px;
-  }
-  // .main-slider__addinfo
-  &__addinfo {
-    @include adaptiv-value("margin-bottom", 30, 20, 1);
-    @include adaptiv-font(16, 14, 1);
-    line-height: 22 / 16 * 100%;
-    color: $additionalColor;
-  }
-  // .main-slider__btn-wrapper
-  &__btn-wrapper {
-    @media (min-width: $md2+px) {
-      width: 203px;
-    }
-    @include adaptiv-value("padding-top", 20, 15, 1);
-  }
-  // .main-slider__btn
-  &__btn {
-  }
-  // .main-slider__img
-  &__img {
-  }
-  // .main-slider__pagination
-  &__pagination {
-    @media (min-width: $md2+px) {
-      top: 95%;
-      left: 10.35%;
-      margin: 0;
-    }
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 38px;
-    height: 5px;
-    & .swiper-pagination-bullet {
-      display: block;
-      height: 100%;
-      width: 5px;
-      border-radius: 50%;
-      background-color:#C0C4CC;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      &-active {
-        background-color: $mainColor;
-      }
-    }
-  }
 }
 //======================================================================================
 .catalog-nav {
@@ -648,7 +596,7 @@ body {
       &_4 {
         background-image: url(../img/consultation/icon4.svg);
         @media (max-width: $md4+px) {
-          background-image: url(../img/consultation/icon4_small.svg);
+          background-size: 45px;
         }
       }
 		}
@@ -1726,4 +1674,3 @@ body {
 		}
 }
 //</ПРОДУКТ>===========================================================================
-

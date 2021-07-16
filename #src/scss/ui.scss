@@ -24,9 +24,13 @@ hr {
   }
 }
 ._h1 {
-  @include adaptiv-font(40, 24, 1);
-  line-height: 48 / 40 * 100%;
+  @include adaptiv-font(40, 0, 1);
+  @include adaptiv-value("line-height", 48, 0, 1);
   font-weight: 700;
+  @media (max-width: $md4+px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 ._h2 {
   @include adaptiv-value("margin-bottom", 30, 20, 1);
