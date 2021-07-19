@@ -971,20 +971,6 @@ animate({
 })();
 
 
-$(document).ready(function () {
-  $(".portfolio__item").click(function (e) {
-    e.preventDefault();
-    $(".portfolio__item").removeClass("_active");
-    $(this).addClass("_active");
-    let id = $(this).attr("data-id");
-    if (id == 0) {
-      $(".portfolio__img-block").show();
-      return true;
-    }
-    $(".portfolio__img-block").hide();
-    $(".portfolio__item_id_" + id).show();
-  });
-});
 //=====================================================================================
 let langMenu = document.querySelector(".menu__lang-dropdown");
 if (langMenu != null) {
@@ -998,6 +984,21 @@ if (langMenu != null) {
 lightGallery(document.getElementById("animated-thumbnails"), {
   thumbnail: true,
   mode: "lg-fade",
+});
+//=====================================================================================
+$(document).ready(function () {
+  $(".portfolio__item").click(function (e) {
+    e.preventDefault();
+    $(".portfolio__item").removeClass("_active");
+    $(this).addClass("_active");
+    let id = $(this).attr("data-id");
+    if (id == 0) {
+      $(".portfolio__img-block").show();
+      return true;
+    }
+    $(".portfolio__img-block").hide();
+    $(".portfolio__item_id_" + id).show();
+  });
 });
 //======================================================================================
 let mainTextSlider = new Swiper(".main-slider__text-slider", {
@@ -1023,7 +1024,9 @@ let mainImageSlider = new Swiper(".main-slider__img-slider", {
   },
   speed: 800,
   preloadImages: false,
-  lazy: true,
+  lazy: {
+    loadPrevNext: true,
+  },
   // pagination: {
   //   el: ".main-slider__pagination",
   //   type: "bullets",
@@ -1102,6 +1105,7 @@ let productGallerySlider = new Swiper(".product__slider_gallery", {
 });
 productMainSlider.controller.control = productGallerySlider;
 productGallerySlider.controller.control = productMainSlider;
+
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
