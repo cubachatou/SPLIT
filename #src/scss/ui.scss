@@ -58,6 +58,18 @@ hr {
   @include adaptiv-value("line-height", 28, 29, 1);
 }
 //====================================================================================================
+._messanger {
+  display: block;
+  width: 20.3px;
+  height: 20.3px;
+  border-radius: 50%;
+  &._viber {
+    background: #9069AE url(../img/icons/viber.svg) no-repeat 48% 55% / auto;
+  }
+  &._telegram {
+    background: #429ADF url(../img/icons/telegram.svg) no-repeat 40% 55% / auto;
+  }
+}
 ._price {
   display: flex;
   justify-content: flex-end;

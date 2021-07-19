@@ -160,7 +160,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex: 0 1 378px;
+      flex: 0 1 371px;
+      margin-right: 16px;
       @media (max-width: $md2+px) {
         flex: 0 0 auto;
         gap: 32px;
@@ -184,6 +185,15 @@
         display: none;
       }
 		}
+		// .menu__messsangers
+		&__messsangers {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5px;
+      @media (max-width: 839.98px) {
+        display: none;
+      }
+    }
 		// .menu__btn-menu
 		&__btn-menu {
       z-index: 5;

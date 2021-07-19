@@ -1001,6 +1001,10 @@ lightGallery(document.getElementById("animated-thumbnails"), {
 });
 //======================================================================================
 let mainTextSlider = new Swiper(".main-slider__text-slider", {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
   speed: 800,
   spaceBetween: 600,
   pagination: {
@@ -1017,10 +1021,6 @@ let mainTextSlider = new Swiper(".main-slider__text-slider", {
 
 let mainImageSlider = new Swiper(".main-slider__img-slider", {
   effect: "fade",
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
-  },
   speed: 800,
   preloadImages: false,
   lazy: {
