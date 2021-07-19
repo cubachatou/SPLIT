@@ -971,21 +971,6 @@ animate({
 })();
 
 
-//=====================================================================================
-let langMenu = document.querySelector(".menu__lang-dropdown");
-if (langMenu != null) {
-  let langList = document.querySelector(".lang-dropdown__list");
-	langMenu.addEventListener("click", function (e) {
-    langMenu.classList.toggle("_active");
-    langList.classList.toggle("_active");
-  });
-};
-//======================================================================================
-lightGallery(document.getElementById("animated-thumbnails"), {
-  thumbnail: true,
-  mode: "lg-fade",
-});
-//=====================================================================================
 $(document).ready(function () {
   $(".portfolio__item").click(function (e) {
     e.preventDefault();
@@ -999,6 +984,20 @@ $(document).ready(function () {
     $(".portfolio__img-block").hide();
     $(".portfolio__item_id_" + id).show();
   });
+});
+//=====================================================================================
+let langMenu = document.querySelector(".menu__lang-dropdown");
+if (langMenu != null) {
+  let langList = document.querySelector(".lang-dropdown__list");
+	langMenu.addEventListener("click", function (e) {
+    langMenu.classList.toggle("_active");
+    langList.classList.toggle("_active");
+  });
+};
+//======================================================================================
+lightGallery(document.getElementById("animated-thumbnails"), {
+  thumbnail: true,
+  mode: "lg-fade",
 });
 //======================================================================================
 let mainTextSlider = new Swiper(".main-slider__text-slider", {
@@ -1105,7 +1104,6 @@ let productGallerySlider = new Swiper(".product__slider_gallery", {
 });
 productMainSlider.controller.control = productGallerySlider;
 productGallerySlider.controller.control = productMainSlider;
-
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
