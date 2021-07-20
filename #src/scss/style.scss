@@ -709,9 +709,9 @@ body {
 }
 //======================================================================================
 .video-container {
-  margin: 0 -8px -16px;
+  // margin: 0 -8px -16px;
   @media (max-width: $md4+px) {
-    margin: 0 0 -16px;
+    margin: 0 8px;
   }
 }
 
