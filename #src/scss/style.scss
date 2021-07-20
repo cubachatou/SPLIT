@@ -625,7 +625,6 @@ body {
 		}
 		// .consultation__item
 		&__item {
-      // flex: 0 1 25%;
       @include adaptiv-value("padding-top", 80, 55, 1);
       text-align: center;
       @include adaptiv-font(16, 12, 1);
@@ -868,7 +867,6 @@ body {
         object-fit: cover;
         object-position: cover;
       }
-      // @include adaptiv-value("height", 332, 182, 1);
 		}
 		// .main-info__body-content
 		&__body-content {
@@ -1164,10 +1162,6 @@ body {
           padding-top: 53.44%;
         }
       }
-      @media (max-width: $md4+px) {
-        // flex: 0 0 100%;
-        // padding-top: 60%;
-      }
 		}
 		// .services__body
 		&__body {
@@ -1199,7 +1193,6 @@ body {
           position: absolute;
           top: 5px;
           left: 0px;
-          // left: 0%;
           width: 6px;
           height: 90%;
           background-color: $accentColor;
@@ -1605,7 +1598,6 @@ body {
 		&__submit-block {
       display: flex;
       align-items: center;
-      // padding: 25px 30px;
       @include adaptiv-value("padding-top", 25, 20, 1);
       @include adaptiv-value("padding-left", 30, 10, 1);
       @include adaptiv-value("padding-right", 30, 10, 1);

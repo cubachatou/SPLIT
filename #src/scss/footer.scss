@@ -31,7 +31,6 @@
       @include adaptiv-value(padding-bottom, 85, 50, 1);
       @media (max-width: 839.98px) {
         flex-wrap: wrap;
-        // flex-direction: column;
       }
 		}
     // .footer__agree
@@ -239,5 +238,4 @@
 			}
 		}
 }
-
 //====================================================================================================
