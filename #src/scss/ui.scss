@@ -343,7 +343,7 @@ body.ie {
 	object,
 	embed {
 		position: absolute;
-		top: 0;
+		top: -8px;
 		left: 0;
 		width: 100%;
 		height: 100%;
@@ -361,23 +361,6 @@ body.ie {
     backdrop-filter: blur(4px);
     @include adaptiv-value("border-radius", 27, 15, 0);
   }
-}
-.videobg {
-	video,
-	iframe,
-	object,
-	embed {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: -100;
-		transform: translateX(-50%) translateY(-50%);
-		background-size: cover;
-	}
 }
 //====================================================================================================
 // ._more-block
@@ -472,29 +455,6 @@ body.ie {
 	display: none !important;
 }
 .swiper-pagination {
-  // position: absolute;
-  // top: 0px;
-  // left: 0px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // position: absolute;
-  // top: 95%;
-  // left: 10.5%;
-  // width: 38px;
-  // height: 0;
-  // padding-top: 0.358%;
-  &-bullet {
-    // width: 5px;
-    // height: 100%;
-    // transition: all 0.3s ease 0s;
-    // background: #C0C4CC;
-    // border-radius: 50%;
-    // cursor: pointer;
-    // &-active {
-    //   background: $mainColor;
-    // }
-  }
 }
 //====================================================================================================
 ._tabs {
