@@ -72,6 +72,7 @@ let popular_swiper = new Swiper(".popular__swiper", {
   observer: true,
   observeParents: true,
   slidesPerView: 4,
+  slidesPerGroup: 4,
   spaceBetween: 30,
   // autoHeight: true,
   speed: 800,
