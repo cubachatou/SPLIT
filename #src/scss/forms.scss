@@ -158,12 +158,12 @@
 		border-top: 0;
 		font-size: 14px;
     font-weight: 600;
-		padding: 10px 0px 0px 0px;
+		padding: 0;
 	}
 	// .select__option
 	&__option {
 		cursor: pointer;
-		padding: 24.5px 15px 24.5px 80px;
+		padding: 24px 15px 24px 80px;
 		margin: 0px 0px 0px 0px;
     border-bottom: 1px solid #E4E6EB;
 		@media (min-width: 992px) {
