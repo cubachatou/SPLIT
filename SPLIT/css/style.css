@@ -960,13 +960,14 @@ hr._pc-hidden {
   background: #92B115;
   border-radius: 50%;
   color: #fff;
+  overflow: hidden;
 }
 
 ._bp-text {
   width: 70px;
   margin-left: -35px;
   margin-bottom: 9px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 15px;
 }
@@ -2530,7 +2531,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 ._no-webp .popup__body{
-  background: #fff url(../img/form-section-bg.png) no-repeat bottom/contain; }
+  background: #fff url(../img/popup-bg.png) no-repeat bottom/contain; }
 
 .popup__body {
   -webkit-transform: scale(0);
@@ -3149,7 +3150,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 ._no-webp .popup__body{
-  background: #fff url(../img/form-section-bg.png) no-repeat bottom/contain; }
+  background: #fff url(../img/popup-bg.png) no-repeat bottom/contain; }
 
 .popup__body {
   -webkit-transform: scale(0);
@@ -6652,9 +6653,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 ._webp .lg-outer .lg-has-youtube:hover .lg-video-play{ background: url(../img/youtube-play.webp) no-repeat scroll 0 -60px transparent; }
 
-._webp .popup__body{ background: #fff url(../img/form-section-bg.webp) no-repeat bottom/contain; }
+._webp .popup__body{ background: #fff url(../img/popup-bg.webp) no-repeat bottom/contain; }
 
-._webp .popup__body{ background: #fff url(../img/form-section-bg.webp) no-repeat bottom/contain; }
+._webp .popup__body{ background: #fff url(../img/popup-bg.webp) no-repeat bottom/contain; }
 
 ._webp .form-section__body{ background: #fff url(../img/form-section-bg.webp) no-repeat bottom right/contain; }
 

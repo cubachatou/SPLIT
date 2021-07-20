@@ -160,11 +160,12 @@ hr {
   background: #92B115;
   border-radius: 50%;
   color: #fff;
+  overflow: hidden;
   &-text {
     @include adaptiv-value("width", 70, 48, 1);
     @include adaptiv-value("margin-left", -35, -25, 1);
     margin-bottom: 9px;
-    font-weight: bold;
+    font-weight: 700;
     @include adaptiv-font(18, 14, 1);
     line-height: 15px;
   }
