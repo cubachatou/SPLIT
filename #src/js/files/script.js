@@ -53,11 +53,6 @@ let mainImageSlider = new Swiper(".main-slider__img-slider", {
   lazy: {
     loadPrevNext: true,
   },
-  // pagination: {
-  //   el: ".main-slider__pagination",
-  //   type: "bullets",
-  //   clickable: true,
-  // },
   on: {
     lazyImageReady: function () {
       ibg();
@@ -74,10 +69,7 @@ let popular_swiper = new Swiper(".popular__swiper", {
   slidesPerView: 4,
   slidesPerGroup: 4,
   spaceBetween: 30,
-  // autoHeight: true,
   speed: 800,
-  //touchRatio: 0,
-  //simulateTouch: false,
   loop: true,
   preloadImages: false,
   lazy: {
@@ -122,9 +114,7 @@ let productGallerySlider = new Swiper(".product__slider_gallery", {
   observer: true,
   observeParents: true,
   spaceBetween: 10,
-  // centeredSlides: true,
   slidesPerView: 4,
-  // touchRatio: 0.2,
   slideToClickedSlide: true,
   loop: true,
   loopedSlides: 4,
