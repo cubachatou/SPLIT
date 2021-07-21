@@ -250,9 +250,7 @@
           </div>
         </section>
         <div class="video-container _video">
-          <video id="video" playsinline muted poster="img/video-poster.webp" class="video">
-            <source src="https://cdv.fashion-vibes.com/plit0/video.m3u8" type="application/x-mpegURL" />
-          </video>
+          <video src="videos/Split.mp4" preload="auto" autoplay muted loop></video>
         </div>
         <section class="form-section _bg-gray">
           <div class="form-section__content _container">
@@ -324,14 +322,5 @@
 		</div>
 		@@include('_popup.html',{})
 		@@include('_js.html',{})
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-    <script>
-      let player = videojs("video", {"poster":"img/video-poster.webp"});
-      window.onscroll = function() {
-        player.muted(true);
-        player.loop(true);
-        player.play();
-      };
-    </script>
 	</body>
 </html>
