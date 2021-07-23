@@ -1109,9 +1109,6 @@ body {
   & h2 {
     margin-top: 32px;
   }
-		// .services__content
-		&__content {
-		}
 		// .services__block
 		&__block {
       background-color: #fff;
@@ -1168,6 +1165,9 @@ body {
 		&__body {
       @include adaptiv-value("padding-right", 95, 0, 1);
       @include adaptiv-value("padding-left", 95, 0, 1);
+      @media (max-width: $md4+px) {
+        padding: 0 8px;
+      }
       & p {
         font-size: 16px;
         line-height: 24px;
@@ -1178,14 +1178,9 @@ body {
           color: $additionalColor;
         }
       }
-      @media (max-width: $md4+px) {
-        padding: 0 8px;
-      }
-		}
-		// .services__p-centered
-		&__p-centered {
-      @include adaptiv-value("padding-right", 95, 0, 1);
-      @include adaptiv-value("padding-left", 62, 0, 1);
+      & > div {
+        @include adaptiv-value("padding-right", 95, 0, 1);
+        @include adaptiv-value("padding-left", 62, 0, 1);
       & p {
         position: relative;
         @include adaptiv-value("padding-left", 27, 23, 1);
@@ -1200,16 +1195,18 @@ body {
           @media (max-width: $md4+px) {
             top: -5px;
             height: 95%;
+            }
           }
         }
       }
-		}
-		// .services__body-img-wrapper
-		&__body-img-wrapper {
-      padding-top: 48.37%;
-      margin-top: 93px;
-      @include adaptiv-value("margin-top", 93, 23, 1);
-      @include adaptiv-value("margin-bottom", 70, 50, 1);
+      & picture {
+        @extend ._ibg;
+        display: block;
+        padding-top: 48.37%;
+        margin-top: 93px;
+        @include adaptiv-value("margin-top", 93, 23, 1);
+        @include adaptiv-value("margin-bottom", 70, 50, 1);
+      }
 		}
 }
 //</УСЛУГИ>============================================================================
