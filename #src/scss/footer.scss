@@ -1,8 +1,27 @@
 //====================================================================================================
 .footer {
-  & .menu__nav {
-    @media (max-width: $md3+px) {
-      display: none;
+  @media (max-width: $md3+px) {
+    & nav {
+      margin: 0 auto 30px;
+      & ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0;
+        text-align: inherit;
+        row-gap: 15px;
+        column-gap: 35px;
+        & li {
+          width: inherit;
+          height: inherit;
+          padding: 0;
+          & a {
+            display: inline-flex;
+            width: inherit;
+            height: inherit;
+          }
+        }
+      }
     }
   }
 		// .footer__content
