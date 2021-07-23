@@ -39,7 +39,7 @@
   color: #fff;
   background-color: $accentColor;
   border: 1px solid $accentColor;
-  transition: all 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 	@media (any-hover: hover) {
     &:hover {
     color: $accentColor;
@@ -129,14 +129,10 @@
 		&:before {
       font-size: 7px;
       color: $mainColor;
-			// content: "";
 			display: inline-block;
 			transition: all 0.3s ease 0s;
       @extend %ic;
       @extend ._icon-arrow_down;
-			// width: 7px;
-			// height: 13px;
-			// background: url("../img/icons/select.svg") center / 100% no-repeat;
 		}
 	}
 	&__input {
