@@ -80,7 +80,7 @@
           flex: 0 0 auto;
         }
       }
-      &>ul {
+      & ul:first-child {
         flex: 1 1 auto;
         display: flex;
         justify-content: space-between;
@@ -215,6 +215,10 @@
       font-size: 14px;
       line-height: 14px;
       transition: all 0.3s ease 0s;
+      @media (max-width: $md3+px) {
+        flex-direction: row;
+        padding: 0;
+      }
       &._active {
         top: 100%;
         visibility: visible;

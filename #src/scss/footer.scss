@@ -3,7 +3,7 @@
   @media (max-width: $md3+px) {
     & nav {
       margin: 0 auto 30px;
-      & ul {
+      & ul:first-child {
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
