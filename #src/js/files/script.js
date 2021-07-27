@@ -13,6 +13,14 @@ $(document).ready(function () {
   });
 });
 //=====================================================================================
+// let folioItem = document.querySelector(".portfolio__item");
+// if (folioItem != null) {
+//   folioItem.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     folioItem.classList.add("_active");
+//   });
+// };
+//=====================================================================================
 let langMenu = document.querySelector(".menu__lang-dropdown");
 if (langMenu != null) {
   let langList = document.querySelector(".lang-dropdown__list");
