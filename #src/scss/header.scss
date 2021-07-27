@@ -80,7 +80,7 @@
           flex: 0 0 auto;
         }
       }
-      &>ul {
+      & ul:first-child {
         flex: 1 1 auto;
         display: flex;
         justify-content: space-between;
