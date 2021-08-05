@@ -4554,7 +4554,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .gallery-product__arrow {
-  z-index: 500;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
