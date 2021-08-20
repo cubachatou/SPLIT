@@ -1434,6 +1434,18 @@ body {
         background-color: #E97509;
         border-radius: 50%;
       }
+      &.available {
+        color: #81d742;
+        &::before {
+          background-color: #81d742;
+        }
+      }
+      &.not-available {
+        color: #dd3333;
+        &::before {
+          background-color: #dd3333;
+        }
+      }
 		}
 		// .product__marking
 		&__marking {

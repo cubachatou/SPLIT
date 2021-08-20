@@ -2215,7 +2215,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .popup {
   -webkit-overflow-scrolling: touch;
-  z-index: 100;
+  z-index: 9999;
   padding: 30px 10px;
   position: fixed;
   top: 0px;
@@ -2821,7 +2821,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .popup {
   -webkit-overflow-scrolling: touch;
-  z-index: 100;
+  z-index: 9999;
   padding: 30px 10px;
   position: fixed;
   top: 0px;
@@ -4206,6 +4206,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 5px;
   background-color: #E97509;
   border-radius: 50%;
+}
+
+.product__status.available {
+  color: #81d742;
+}
+
+.product__status.available::before {
+  background-color: #81d742;
+}
+
+.product__status.not-available {
+  color: #dd3333;
+}
+
+.product__status.not-available::before {
+  background-color: #dd3333;
 }
 
 .product__marking {
