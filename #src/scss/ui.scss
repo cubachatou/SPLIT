@@ -253,60 +253,6 @@ hr {
 	user-select: none;
 }
 //====================================================================================================
-ol.counter {
-	list-style-type: none;
-	counter-reset: item;
-	li {
-		position: relative;
-		padding: 0px 0px 0px 45px;
-		&:before {
-			counter-increment: item;
-			content: counter(item);
-			position: absolute;
-			left: 0;
-			top: 0;
-			color: #818181;
-			font-size: 14px;
-			font-weight: 700;
-			text-align: center;
-			line-height: 26px;
-			border-radius: 50%;
-			width: 28px;
-			height: 28px;
-			border: 1px solid #4274bb;
-		}
-	}
-}
-//====================================================================================================
-.ellipsis {
-	display: block;
-	overflow: hidden;
-	width: 100%;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.es {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-//====================================================================================================
-.table {
-	display: table;
-	font-size: 0;
-	width: 100%;
-	//table-layout: fixed;
-}
-.trow {
-	display: table-row;
-}
-.cell {
-	display: table-cell;
-	&.full {
-		width: 100%;
-	}
-}
-//====================================================================================================
 ._ibg {
 	position: relative;
 	img {
@@ -460,43 +406,3 @@ body.ie {
 .swiper-lazy-loading {
   background: url(../img/icons/loading.gif) no-repeat 50% / 25%;
 }
-//====================================================================================================
-._tabs {
-}
-._tabs-item {
-}
-._tabs-block {
-	display: none;
-	&._active {
-		display: block;
-	}
-}
-//=====================================================================================================================
-.mirror {
-	transform: scale(-1, 1);
-}
-//=====================================================================================================================
-.nicescroll-rails {
-	z-index: 1000 !important;
-}
-//========================================================================================================================================================
-
-//========================================================================================================================================================
-._custom-scroll {
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 3px;
-	height: 100%;
-	z-index: 1000;
-	//background-color: rgba(0, 0, 0, 0.1);
-	&__line {
-		background-color: rgba(0, 0, 0, 0.5);
-		border-radius: 3px 0 0 3px;
-		position: relative;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
-}
-//</ГОТОВЫЕ КЛАССЫ>====================================================================================================

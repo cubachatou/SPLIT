@@ -80,8 +80,8 @@ body {
 @import "popup";
 @import "header";
 @import "footer";
-@import "home";
 @import "popup";
+// @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>=======================================================================
@@ -1219,9 +1219,7 @@ body {
 		// .portfolio__list
 		&__list {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 25px;
       @include adaptiv-value("margin-bottom", 35, 20, 1);
       @include adaptiv-value("padding-left", 52.5, 12.5, 1);
       @include adaptiv-value("padding-right", 52.5, 12.5, 1);
@@ -1236,6 +1234,7 @@ body {
       align-items: center;
       position: relative;
       @include adaptiv-value("height", 57, 47, 1);
+      &:not(:last-child) {margin: 0px 15px 0px 0px;}
       padding: 0 12.5px;
       font-weight: 600;
       font-size: 14px;
