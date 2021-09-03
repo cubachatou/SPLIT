@@ -13,6 +13,8 @@ $(document).ready(function () {
   });
 
   $(".price_change").click(function () {
+	$(".price_change").removeClass('check');
+	$(this).addClass('check');
     var radioButtons = $("input:radio[name='product_thickness']");
     var selectedIndex = radioButtons.index(radioButtons.filter(":checked"));
     if (selectedIndex == -1) {
@@ -22,6 +24,17 @@ $(document).ready(function () {
     var prices = JSON.parse(price);
     $(".product__price").text(prices[selectedIndex]);
   });
+
+  $(".select__option").click(function(){
+    window.location.href = $(this).attr('data-value');
+  });
+
+  $('.product__thickness-options label').click(function(){
+
+    setTimeout(function(){ $(".price_change.check").click(); },300);
+
+  });
+
 });
 //=====================================================================================
 // let folioItem = document.querySelector(".portfolio__item");
