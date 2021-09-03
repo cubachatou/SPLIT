@@ -23,7 +23,7 @@
       display: flex;
       gap: 10px;
 		}
-		// .pagination-catal__items
+		// .pagination-catal__item
 		&__item {
       @extend .popular__arrow;
       @include adaptiv-value("height", 40, 35, 1);
@@ -38,6 +38,9 @@
       &._active {
         border: 1px solid $accentColor;
         color: $mainColor;
+      }
+      & .page-numbers {
+        color: inherit;
       }
 		}
 }

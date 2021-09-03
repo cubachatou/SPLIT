@@ -1345,6 +1345,7 @@ body {
 			}
 			// .product__slider_gallery
 			&_gallery {
+        width: 100%;
         max-width: 286px;
         margin: 0 auto;
         & .swiper-slide {
@@ -1666,6 +1667,15 @@ body {
         @include adaptiv-value("line-height", 24, 20, 1);
         &:not(:last-child) {
           @include adaptiv-value("margin-bottom", 30, 15, 1);
+        }
+      }
+      & ul {
+        margin: 0px 0px 0px 20px;
+        & li {
+          list-style-type: disc;
+          &:not(:last-child) {
+            margin: 0px 0px 10px 0px;
+          }
         }
       }
 		}

@@ -1087,9 +1087,11 @@ let popular_swiper = new Swiper(".popular__swiper", {
 });
 //======================================================================================
 let productMainSlider = new Swiper(".product__slider_big", {
-  spaceBetween: 10,
-  loop: true,
-  loopedSlides: 4,
+  // spaceBetween: 10,
+  // loop: true,
+  // loopedSlides: 2,
+  // slidesPerView: 1,
+  slideToClickedSlide: true,
 });
 let productGallerySlider = new Swiper(".product__slider_gallery", {
   observer: true,
@@ -1097,8 +1099,9 @@ let productGallerySlider = new Swiper(".product__slider_gallery", {
   spaceBetween: 10,
   slidesPerView: 4,
   slideToClickedSlide: true,
-  loop: true,
-  loopedSlides: 4,
+  centeredSlides: true,
+  // loop: true,
+  // loopedSlides: 4,
   navigation: {
     nextEl: ".gallery-product__arrow_next",
     prevEl: ".gallery-product__arrow_prev",
