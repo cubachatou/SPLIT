@@ -243,6 +243,10 @@ body._lock {
   padding: 0 15px;
 }
 
+._phone {
+  letter-spacing: 3px;
+}
+
 .form__input {
   height: 62px;
 }
