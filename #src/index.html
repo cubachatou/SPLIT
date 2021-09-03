@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page main">
+  @@include('_head.html',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('_header.html',{})
+      <main class="page main">
         <section class="main-slider">
           <div class="main-slider__content">
-            <div dir="rtl" class="main-slider__text-slider swiper-container _swiper">
+            <div
+              dir="rtl"
+              class="main-slider__text-slider swiper-container _swiper"
+            >
               <div class="swiper-wrapper">
                 <div dir="ltr" class="swiper-slide">
                   <div class="main-slider__textarea">
                     <span class="main-slider__limited">Остатки-сладки!</span>
-                    <h1 class="_h1">Тротуарная плитка<br>в небольших количествах<br>с приятной скидкой</h1>
+                    <h1 class="_h1">
+                      Тротуарная плитка<br />в небольших количествах<br />с
+                      приятной скидкой
+                    </h1>
                     <!-- <span class="main-slider__addinfo">С эффектами колормикса</span> -->
                   </div>
                   <a href="#" class="main-slider__btn btn">Подробнее</a>
@@ -22,41 +26,74 @@
                 <div dir="ltr" class="swiper-slide">
                   <div class="main-slider__textarea">
                     <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
-                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "Брук"</h1>
-                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                    <h1 class="_h1">Новинка!<br />Тротуарная плитка "Брук"</h1>
+                    <span class="main-slider__addinfo"
+                      >С эффектами колормикса</span
+                    >
                   </div>
                   <a href="#" class="main-slider__btn btn">Подробнее</a>
                 </div>
                 <div dir="ltr" class="swiper-slide">
                   <div class="main-slider__textarea">
                     <!-- <span class="main-slider__limited">Остатки-сладки!</span> -->
-                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "кирпич"</h1>
-                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                    <h1 class="_h1">
+                      Новинка!<br />Тротуарная плитка "кирпич"
+                    </h1>
+                    <span class="main-slider__addinfo"
+                      >С эффектами колормикса</span
+                    >
                   </div>
                   <a href="#" class="main-slider__btn btn">Подробнее</a>
                 </div>
                 <div dir="ltr" class="swiper-slide">
                   <div class="main-slider__textarea">
                     <span class="main-slider__limited">Остатки-сладки!</span>
-                    <h1 class="_h1">Новинка!<br>Тротуарная плитка "Патио"</h1>
-                    <span class="main-slider__addinfo">С эффектами колормикса</span>
+                    <h1 class="_h1">Новинка!<br />Тротуарная плитка "Патио"</h1>
+                    <span class="main-slider__addinfo"
+                      >С эффектами колормикса</span
+                    >
                   </div>
                   <a href="#" class="main-slider__btn btn">Подробнее</a>
                 </div>
               </div>
-              <div data-da=".main-slider__content,767.98,first" class="main-slider__pagination"></div>
+              <div
+                data-da=".main-slider__content,767.98,first"
+                class="main-slider__pagination"
+              ></div>
             </div>
-            <div data-da=".main-slider__content,767.98,first" class="main-slider__img-slider swiper-container _swiper _ibg">
+            <div
+              data-da=".main-slider__content,767.98,first"
+              class="main-slider__img-slider swiper-container _swiper _ibg"
+            >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="main-slider__img-wrapper">
                     <picture class="swiper-lazy">
-                      <source srcset="img/main-content/image1_x2.webp" media="(min-width: 1400px)" type="image/webp">
-                      <source srcset="img/main-content/image1_x2.jpg" media="(min-width: 1400px)" type="image/jpg">
-                      <source srcset="img/main-content/image1.webp" media="(min-width: 479.98px)" type="image/webp">
-                      <source srcset="img/main-content/image1.jpg" media="(min-width: 479.98px)" type="image/jpg">
-                      <source srcset="img/main-content/image1_small.webp" type="image/webp">
-                      <img srcset="img/main-content/image1_small.jpg" alt="">
+                      <source
+                        srcset="img/main-content/image1_x2.webp"
+                        media="(min-width: 1400px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image1_x2.jpg"
+                        media="(min-width: 1400px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image1.webp"
+                        media="(min-width: 479.98px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image1.jpg"
+                        media="(min-width: 479.98px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image1_small.webp"
+                        type="image/webp"
+                      />
+                      <img srcset="img/main-content/image1_small.jpg" alt="" />
                     </picture>
                   </div>
                   <div class="_bp">
@@ -68,36 +105,93 @@
                 <div class="swiper-slide">
                   <div class="main-slider__img-wrapper">
                     <picture class="swiper-lazy">
-                      <source srcset="img/main-content/image2_x2.webp" media="(min-width: 1400px)" type="image/webp">
-                      <source srcset="img/main-content/image2_x2.jpg" media="(min-width: 1400px)" type="image/jpg">
-                      <source srcset="img/main-content/image2.webp" media="(min-width: 479.98px)" type="image/webp">
-                      <source srcset="img/main-content/image2.jpg" media="(min-width: 479.98px)" type="image/jpg">
-                      <source srcset="img/main-content/image2_small.webp" type="image/webp">
-                      <img srcset="img/main-content/image2_small.jpg" alt="">
+                      <source
+                        srcset="img/main-content/image2_x2.webp"
+                        media="(min-width: 1400px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image2_x2.jpg"
+                        media="(min-width: 1400px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image2.webp"
+                        media="(min-width: 479.98px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image2.jpg"
+                        media="(min-width: 479.98px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image2_small.webp"
+                        type="image/webp"
+                      />
+                      <img srcset="img/main-content/image2_small.jpg" alt="" />
                     </picture>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="main-slider__img-wrapper">
                     <picture class="swiper-lazy">
-                      <source srcset="img/main-content/image3_x2.webp" media="(min-width: 1400px)" type="image/webp">
-                      <source srcset="img/main-content/image3_x2.jpg" media="(min-width: 1400px)" type="image/jpg">
-                      <source srcset="img/main-content/image3.webp" media="(min-width: 479.98px)" type="image/webp">
-                      <source srcset="img/main-content/image3.jpg" media="(min-width: 479.98px)" type="image/jpg">
-                      <source srcset="img/main-content/image3_small.webp" type="image/webp">
-                      <img srcset="img/main-content/image3_small.jpg" alt="">
+                      <source
+                        srcset="img/main-content/image3_x2.webp"
+                        media="(min-width: 1400px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image3_x2.jpg"
+                        media="(min-width: 1400px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image3.webp"
+                        media="(min-width: 479.98px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image3.jpg"
+                        media="(min-width: 479.98px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image3_small.webp"
+                        type="image/webp"
+                      />
+                      <img srcset="img/main-content/image3_small.jpg" alt="" />
                     </picture>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="main-slider__img-wrapper">
                     <picture class="swiper-lazy">
-                      <source srcset="img/main-content/image4_x2.webp" media="(min-width: 1400px)" type="image/webp">
-                      <source srcset="img/main-content/image4_x2.jpg" media="(min-width: 1400px)" type="image/jpg">
-                      <source srcset="img/main-content/image4.webp" media="(min-width: 479.98px)" type="image/webp">
-                      <source srcset="img/main-content/image4.jpg" media="(min-width: 479.98px)" type="image/jpg">
-                      <source srcset="img/main-content/image4_small.webp" type="image/webp">
-                      <img srcset="img/main-content/image4_small.jpg" alt="">
+                      <source
+                        srcset="img/main-content/image4_x2.webp"
+                        media="(min-width: 1400px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image4_x2.jpg"
+                        media="(min-width: 1400px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image4.webp"
+                        media="(min-width: 479.98px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/main-content/image4.jpg"
+                        media="(min-width: 479.98px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="img/main-content/image4_small.webp"
+                        type="image/webp"
+                      />
+                      <img srcset="img/main-content/image4_small.jpg" alt="" />
                     </picture>
                   </div>
                 </div>
@@ -109,10 +203,21 @@
           <div class="catalog-nav__content _container">
             <nav class="catalog-nav__nav">
               <ul class="catalog-nav__list">
-                <li class="catalog-nav__item catalog-nav__item_1">Выбропресованная плитка<a href="#" class="catalog-nav__link"></a></li>
-                <li class="catalog-nav__item catalog-nav__item_2">Вибролитьевая плитка<a href="#" class="catalog-nav__link"></a></li>
-                <li class="catalog-nav__item catalog-nav__item_3">Изделия из бетона<a href="#" class="catalog-nav__link"></a></li>
-                <li class="catalog-nav__item catalog-nav__item_4">Бордюры бетонные<a href="#" class="catalog-nav__link"></a></li>
+                <li class="catalog-nav__item catalog-nav__item_1">
+                  Выбропресованная плитка<a
+                    href="#"
+                    class="catalog-nav__link"
+                  ></a>
+                </li>
+                <li class="catalog-nav__item catalog-nav__item_2">
+                  Вибролитьевая плитка<a href="#" class="catalog-nav__link"></a>
+                </li>
+                <li class="catalog-nav__item catalog-nav__item_3">
+                  Изделия из бетона<a href="#" class="catalog-nav__link"></a>
+                </li>
+                <li class="catalog-nav__item catalog-nav__item_4">
+                  Бордюры бетонные<a href="#" class="catalog-nav__link"></a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -121,19 +226,34 @@
           <div class="popular__content _container">
             <h2 class="_h2">Популярные товары</h2>
             <div class="popular__navigation">
-              <div class="popular__arrow popular__arrow_l _icon-arrow_paggination"></div>
-              <div class="popular__arrow popular__arrow_r _icon-arrow_paggination"></div>
+              <div
+                class="popular__arrow popular__arrow_l _icon-arrow_paggination"
+              ></div>
+              <div
+                class="popular__arrow popular__arrow_r _icon-arrow_paggination"
+              ></div>
             </div>
             <div class="popular__swiper swiper-container">
               <div class="popular__swiper-wrapper swiper-wrapper">
-                <a href="product.html" class="popular__item item-popular swiper-slide">
+                <a
+                  href="product.html"
+                  class="popular__item item-popular swiper-slide"
+                >
                   <div class="item-popular__img-wrapper _ibg">
-                    <img data-src="img/catalog/content/catalog-item1.webp" class="swiper-lazy" alt="">
+                    <img
+                      data-src="img/catalog/content/catalog-item1.webp"
+                      class="swiper-lazy"
+                      alt=""
+                    />
                     <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="item-popular__description-block">
-                    <span class="item-popular__category">Изделия из бетона</span>
-                    <h4 class="item-popular__title _h4">Тротуарная плитка австрийский гросс</h4>
+                    <span class="item-popular__category"
+                      >Изделия из бетона</span
+                    >
+                    <h4 class="item-popular__title _h4">
+                      Тротуарная плитка австрийский гросс
+                    </h4>
                     <p class="item-popular__price-wrapper">
                       <span class="item-popular__price _icon-uah">145</span>
                       <span class="item-popular__meter">За 1 м.кв</span>
@@ -143,12 +263,20 @@
                 </a>
                 <a href="#" class="popular__item item-popular swiper-slide">
                   <div class="item-popular__img-wrapper _ibg">
-                    <img data-src="img/catalog/content/catalog-item2.webp" class="swiper-lazy" alt="">
+                    <img
+                      data-src="img/catalog/content/catalog-item2.webp"
+                      class="swiper-lazy"
+                      alt=""
+                    />
                     <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="item-popular__description-block">
-                    <span class="item-popular__category">Выбропресованная плитка</span>
-                    <h4 class="item-popular__title _h4">Тротуарная плитка старый город</h4>
+                    <span class="item-popular__category"
+                      >Выбропресованная плитка</span
+                    >
+                    <h4 class="item-popular__title _h4">
+                      Тротуарная плитка старый город
+                    </h4>
                   </div>
                   <p class="item-popular__price-wrapper">
                     <span class="item-popular__price _icon-uah">124</span>
@@ -158,7 +286,11 @@
                 </a>
                 <a href="#" class="popular__item item-popular swiper-slide">
                   <div class="item-popular__img-wrapper _ibg">
-                    <img data-src="img/catalog/content/catalog-item3.webp" class="swiper-lazy" alt="">
+                    <img
+                      data-src="img/catalog/content/catalog-item3.webp"
+                      class="swiper-lazy"
+                      alt=""
+                    />
                     <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="item-popular__description-block">
@@ -173,12 +305,20 @@
                 </a>
                 <a href="#" class="popular__item item-popular swiper-slide">
                   <div class="item-popular__img-wrapper _ibg">
-                    <img data-src="img/catalog/content/catalog-item4.webp" class="swiper-lazy" alt="">
+                    <img
+                      data-src="img/catalog/content/catalog-item4.webp"
+                      class="swiper-lazy"
+                      alt=""
+                    />
                     <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="item-popular__description-block">
-                    <span class="item-popular__category">Вибролитьевая плитка</span>
-                    <h4 class="item-popular__title _h4">Тротуарная плитка австрийский гросс</h4>
+                    <span class="item-popular__category"
+                      >Вибролитьевая плитка</span
+                    >
+                    <h4 class="item-popular__title _h4">
+                      Тротуарная плитка австрийский гросс
+                    </h4>
                     <p class="item-popular__price-wrapper">
                       <span class="item-popular__price _icon-uah">102</span>
                       <span class="item-popular__meter">За 1 м.кв</span>
@@ -196,32 +336,60 @@
             <div class="main-services__row">
               <div class="main-services__item item-services">
                 <div class="item-services__img-wrapper _ibg">
-                  <img src="img/services/img1.webp" alt="">
+                  <img src="img/services/img1.webp" alt="" />
                 </div>
                 <div class="item-services__textarea">
-                  <h3 class="item-services__title _h3">Доставка тротуарной плитки</h3>
-                  <p class="item-services__text">Каким образом доставить тяжелую и объемную продукцию? кран-манипулятор к вашим услугам, грузоподемностью до 15 тонн. способен ...</p>
-                  <a href="services-3.html" class="item-services__link _icon-arrow_detailed-after ">Подробнее</a>
+                  <h3 class="item-services__title _h3">
+                    Доставка тротуарной плитки
+                  </h3>
+                  <p class="item-services__text">
+                    Каким образом доставить тяжелую и объемную продукцию?
+                    кран-манипулятор к вашим услугам, грузоподемностью до 15
+                    тонн. способен ...
+                  </p>
+                  <a
+                    href="services-3.html"
+                    class="item-services__link _icon-arrow_detailed-after"
+                    >Подробнее</a
+                  >
                 </div>
               </div>
               <div class="main-services__item item-services">
                 <div class="item-services__img-wrapper _ibg">
-                  <img src="img/services/img2.webp" alt="">
+                  <img src="img/services/img2.webp" alt="" />
                 </div>
                 <div class="item-services__textarea">
                   <h3 class="item-services__title _h3">Выезд замерщика</h3>
-                  <p class="item-services__text">Даже если вы знаете стоимость квадратного метра тротуарной плитки, сложно определить затраты, которые будут сопутствовать при ее укладке.</p>
-                  <a href="services-4.html" class="item-services__link _icon-arrow_detailed-after ">Подробнее</a>
+                  <p class="item-services__text">
+                    Даже если вы знаете стоимость квадратного метра тротуарной
+                    плитки, сложно определить затраты, которые будут
+                    сопутствовать при ее укладке.
+                  </p>
+                  <a
+                    href="services-4.html"
+                    class="item-services__link _icon-arrow_detailed-after"
+                    >Подробнее</a
+                  >
                 </div>
               </div>
               <div class="main-services__item item-services">
                 <div class="item-services__img-wrapper _ibg">
-                  <img src="img/services/img3.webp" alt="">
+                  <img src="img/services/img3.webp" alt="" />
                 </div>
                 <div class="item-services__textarea">
-                  <h3 class="item-services__title _h3">Укладка тротуарной плитки</h3>
-                  <p class="item-services__text">Перед укладкой тротуарной плитки, нужно определиться, какой вид движения будет совершатся на вашей территории. при пешеходе, рекомендуемая толщина ...</p>
-                  <a href="services.html" class="item-services__link _icon-arrow_detailed-after ">Подробнее</a>
+                  <h3 class="item-services__title _h3">
+                    Укладка тротуарной плитки
+                  </h3>
+                  <p class="item-services__text">
+                    Перед укладкой тротуарной плитки, нужно определиться, какой
+                    вид движения будет совершатся на вашей территории. при
+                    пешеходе, рекомендуемая толщина ...
+                  </p>
+                  <a
+                    href="services.html"
+                    class="item-services__link _icon-arrow_detailed-after"
+                    >Подробнее</a
+                  >
                 </div>
               </div>
             </div>
@@ -230,41 +398,83 @@
         <section class="consultation _bg-gray">
           <div class="consultation__content _container">
             <div class="consultation__wrapper">
-              <h5 class="consultation__title _h5">Получите от нас персональную консультацию и вы узнаете:</h5>
+              <h5 class="consultation__title _h5">
+                Получите от нас персональную консультацию и вы узнаете:
+              </h5>
               <ul class="consultation__list">
-                <li class="consultation__item consultation__item_1">Пошаговый план действий</li>
-                <li class="consultation__item consultation__item_2">Ответы на возникшие вопросы</li>
-                <li class="consultation__item consultation__item_3">Список рекомендаций по покупке и укладке</li>
-                <li class="consultation__item consultation__item_4">Конечную смету, стоимость и сроки</li>
+                <li class="consultation__item consultation__item_1">
+                  Пошаговый план действий
+                </li>
+                <li class="consultation__item consultation__item_2">
+                  Ответы на возникшие вопросы
+                </li>
+                <li class="consultation__item consultation__item_3">
+                  Список рекомендаций по покупке и укладке
+                </li>
+                <li class="consultation__item consultation__item_4">
+                  Конечную смету, стоимость и сроки
+                </li>
               </ul>
-              <hr>
+              <hr />
               <div class="consultation__call-wrapper">
-                <p class="consultation__call-now">Повоните сейчас<span>И запишитесь на консультацию</span></p>
+                <p class="consultation__call-now">
+                  Повоните сейчас<span>И запишитесь на консультацию</span>
+                </p>
                 <a href="tel:+380665670204" class="consultation__number">
                   <div class="btn-call"></div>
                   <span class="_phone-number _b">(066) 567-02-04</span>
                 </a>
               </div>
-              <p class="consultation__text">Консультация абсолютно бесплатная.<br>Не тратье свое мремя , наши специалисты сделают все за вас.</p>
+              <p class="consultation__text">
+                Консультация абсолютно бесплатная.<br />Не тратье свое мремя ,
+                наши специалисты сделают все за вас.
+              </p>
             </div>
           </div>
         </section>
         <div class="video-container _video">
-          <video src="videos/Split.mp4" preload="auto" autoplay muted loop></video>
+          <video
+            src="videos/Split.mp4"
+            preload="auto"
+            autoplay
+            muted
+            loop
+          ></video>
         </div>
         <section class="form-section _bg-gray">
           <div class="form-section__content _container">
             <div class="form-section__body">
               <h5 class="form-section__title _h5">Остались вопросы?</h5>
-              <p class="form-section__sub-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
+              <p class="form-section__sub-title">
+                Оставьте ваш номер телефона и мы вам перезвоним
+              </p>
               <form action="#" class="form-section__form form">
                 <div class="form-section__form-line form__line form__line_name">
-                  <input autocomplete="off" type="text" name="form[]"  data-value="Введите имя" class="form__input input _req">
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-value="Введите имя"
+                    class="form__input input _req"
+                  />
                 </div>
-                <div class="form-section__form-line form__line form__line_number">
-                  <input autocomplete="off" type="text" name="form[]"  data-value="+380 (  _ _  )  _ _ _   _ _   _ _" class="form__input input _req _phone">
+                <div
+                  class="form-section__form-line form__line form__line_number"
+                >
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-value="+380 (  _ _  )  _ _ _   _ _   _ _"
+                    class="form__input input _req _phone"
+                  />
                 </div>
-                <button type="submit" class="form-section__btn form__button btn">Отправить</button>
+                <button
+                  type="submit"
+                  class="form-section__btn form__button btn"
+                >
+                  Отправить
+                </button>
               </form>
             </div>
           </div>
@@ -278,7 +488,9 @@
                   <h6 class="main-info__title _h6">Наш магазин по адрессу:</h6>
                 </div>
                 <div class="main-info__row main-info__row_2">
-                  <span class="main-info__address">г. Херсон, Ул.Газовая,8</span>
+                  <span class="main-info__address"
+                    >г. Херсон, Ул.Газовая,8</span
+                  >
                   <span class="main-info__schedule">
                     <p>Пн-Пт:&nbsp;&nbsp;8:30 — 17:00</p>
                     <span>/</span>
@@ -290,35 +502,58 @@
               </div>
             </div>
             <div class="main-info__map" id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21906.178950911344!2d32.556937797267565!3d46.66088348676349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c629151c6301de2!2z0KLRgNC-0YLRg9Cw0YDQvdCw0Y8g0L_Qu9C40YLQutCwIFNwbGl0INCl0LXRgNGB0L7QvQ!5e0!3m2!1sru!2sua!4v1626010349969!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe
+                src="https://www.google.ru/maps/place/Тротуарная+плитка+Split+Херсон/@46.6620921,32.5704536,17z/data=!3m1!4b1!4m5!3m4!1s0x40c41b6dbe442799:0x7c629151c6301de2!8m2!3d46.6620718!4d32.5727089"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
             </div>
             <div class="main-info__body _bg-gray">
               <div class="_container">
                 <div class="main-info__body-content">
                   <p class="">
-                    SEO-тексты необходимы для оптимизации страницы под определенную группу поисковых запросов. Они встречаются на страницах сайтов услуг или категорий товаров в интернет-магазинах. Оптимизированный текст отличается наличием вхождений ключевых слов (запросов пользователей), по которым происходит продвижение страницы.
+                    SEO-тексты необходимы для оптимизации страницы под
+                    определенную группу поисковых запросов. Они встречаются на
+                    страницах сайтов услуг или категорий товаров в
+                    интернет-магазинах. Оптимизированный текст отличается
+                    наличием вхождений ключевых слов (запросов пользователей),
+                    по которым происходит продвижение страницы.
                   </p>
                   <span class="main-info__text-title">
                     Правила написания SEO-текста
                   </span>
                   <p class="">
-                    Текст должен иметь достаточное количество вхождений. Расчет необходимого количества производится на основе анализа конкурентов по ТОПу. Важно не переоптимизировать текст излишними вхождениями. <br>
-                    Ключевые слова должны быть равномерно распределены по всей статье. <br>
-                    Необходимый объем текста также определяется на основе результатов выдачи поисковых систем. <br>
-                    Требуемая уникальность текста составляет не менее 90%. Для тематик, в которых используется большое количество узкоспециализированных терминов, уникальность может составлять 75%. <br>
-                    Отсутствие грамматических ошибок. <br>
-                    Текст должен легко восприниматься. Для этого необходимо использовать подзаголовки, разнообразить содержание, используя маркированные и нумерованные списки, таблицы, изображения. <br>
-                    Рекомендуется использовать слова, близкие тематике статьи (LSI) и слова для внутренней перелинковки. <br>
+                    Текст должен иметь достаточное количество вхождений. Расчет
+                    необходимого количества производится на основе анализа
+                    конкурентов по ТОПу. Важно не переоптимизировать текст
+                    излишними вхождениями. <br />
+                    Ключевые слова должны быть равномерно распределены по всей
+                    статье. <br />
+                    Необходимый объем текста также определяется на основе
+                    результатов выдачи поисковых систем. <br />
+                    Требуемая уникальность текста составляет не менее 90%. Для
+                    тематик, в которых используется большое количество
+                    узкоспециализированных терминов, уникальность может
+                    составлять 75%. <br />
+                    Отсутствие грамматических ошибок. <br />
+                    Текст должен легко восприниматься. Для этого необходимо
+                    использовать подзаголовки, разнообразить содержание,
+                    используя маркированные и нумерованные списки, таблицы,
+                    изображения. <br />
+                    Рекомендуется использовать слова, близкие тематике статьи
+                    (LSI) и слова для внутренней перелинковки. <br />
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+      </main>
+      @@include('_footer.html',{})
+    </div>
+    @@include('_popup.html',{}) @@include('_js.html',{})
+  </body>
 </html>

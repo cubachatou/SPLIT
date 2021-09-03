@@ -11,6 +11,17 @@ $(document).ready(function () {
     $(".portfolio__img-block").hide();
     $(".portfolio__item_id_" + id).show();
   });
+
+  $(".price_change").click(function () {
+    var radioButtons = $("input:radio[name='product_thickness']");
+    var selectedIndex = radioButtons.index(radioButtons.filter(":checked"));
+    if (selectedIndex == -1) {
+      selectedIndex = 0;
+    }
+    var price = $(this).attr("data-prices");
+    var prices = JSON.parse(price);
+    $(".product__price").text(prices[selectedIndex]);
+  });
 });
 //=====================================================================================
 // let folioItem = document.querySelector(".portfolio__item");
@@ -24,11 +35,11 @@ $(document).ready(function () {
 let langMenu = document.querySelector(".menu__lang-dropdown");
 if (langMenu != null) {
   let langList = document.querySelector(".lang-dropdown__list");
-	langMenu.addEventListener("click", function (e) {
+  langMenu.addEventListener("click", function (e) {
     langMenu.classList.toggle("_active");
     langList.classList.toggle("_active");
   });
-};
+}
 //======================================================================================
 lightGallery(document.getElementById("animated-thumbnails"), {
   thumbnail: true,

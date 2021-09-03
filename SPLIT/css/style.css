@@ -2217,6 +2217,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: inherit;
 }
 
+.pagination-catal__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .popup {
   -webkit-overflow-scrolling: touch;
   z-index: 9999;
@@ -3265,6 +3279,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+  outline: none;
 }
 
 .popular__arrow::before,
@@ -3965,6 +3980,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 70px;
 }
 
+.services__body ul {
+  margin: 0 0 20px 20px;
+}
+
+.services__body ul li {
+  list-style-type: disc;
+}
+
+.services__body ul li:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
 .portfolio h1 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -4455,16 +4482,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 30px;
 }
 
-.product__description ul {
-  margin: 0px 0px 0px 20px;
+.product__description ul,
+.product__description ol {
+  margin: 0px 0px 20px 20px;
 }
 
-.product__description ul li {
+.product__description ul li,
+.product__description ol li {
   list-style-type: disc;
+  line-height: 150%;
 }
 
-.product__description ul li:not(:last-child) {
+.product__description ul li:not(:last-child),
+.product__description ol li:not(:last-child) {
   margin: 0px 0px 10px 0px;
+}
+
+.product__description ol li {
+  list-style-type: decimal;
 }
 
 .gallery-product__wrapper {
