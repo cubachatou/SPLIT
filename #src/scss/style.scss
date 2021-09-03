@@ -1479,7 +1479,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include adaptiv-value("width", 74, 65, 1);
+        padding: 0 15px;
         @include adaptiv-value("height", 42, 37, 1);
         background: #F8F9FB;
         cursor: pointer;
@@ -1647,9 +1647,8 @@ body {
 		}
     // .product__btn
 		&__btn {
-      flex: 0 1 168px;
       margin-left: auto;
-      padding: 22.5px 0;
+      padding: 22.5px 50px;
       @media (max-width: $md4+px) {
         margin-top: 30px;
         flex: 0 0 100%;
@@ -1661,7 +1660,6 @@ body {
       @include adaptiv-value("padding-left", 94, 10, 1);
       @include adaptiv-value("padding-right", 94, 10, 1);
       @include adaptiv-value("padding-bottom", 60, 30, 1);
-      // padding: 50px 94px 60px;
       background-color: #fff;
       & p {
         @include adaptiv-font(16, 14, 1);
@@ -1692,7 +1690,7 @@ body {
   // .gallery-product__item
   &__item {
     height: 64px;
-    width: 64px;
+    width: 64px !important;
     cursor: pointer;
   }
 		// .gallery-product__arrow
