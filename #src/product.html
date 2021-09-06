@@ -1,389 +1,253 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('_head.html',{ "title":"Продукт" })
-  <body>
-    <div class="wrapper">
-      @@include('_header.html',{})
-      <main class="page product _bg-gray">
-        <section class="product__content _container">
-          <div class="product-breadcrumbs _breadcrumbs">
-            <ul class="breadcrumbs-catalog__list">
-              <li class="breadcrumbs-catalog__item">
-                <a href="index.html">Главная</a>
-              </li>
-              <li><span>&nbsp;—&nbsp;</span></li>
-              <li class="breadcrumbs-catalog__item">
-                <a href="catalog.html">Каталог</a>
-              </li>
-              <li><span>&nbsp;—&nbsp;</span></li>
-              <li class="breadcrumbs-catalog__item">
-                <a href="#">Выбропресованная плитка</a>
-              </li>
-              <li><span>&nbsp;—&nbsp;</span></li>
-              <li class="breadcrumbs-catalog__item">
-                Тротуарная плитка австрийский гросс
-              </li>
-            </ul>
-          </div>
-          <div class="product__body">
-            <div class="product__column product__column_l">
-              <div class="swiper-container product__slider_big _swiper">
-                <ul class="swiper-wrapper">
-                  <li class="product__img-wrapper _ibg swiper-slide">
-                    <img src="img/product/catalog-item1.png" alt="" />
-                  </li>
-                  <li class="product__img-wrapper _ibg swiper-slide">
-                    <img src="img/product/catalog-item2.png" alt="" />
-                  </li>
-                  <li class="product__img-wrapper _ibg swiper-slide">
-                    <img src="img/product/catalog-item3.png" alt="" />
-                  </li>
-                  <li class="product__img-wrapper _ibg swiper-slide">
-                    <img src="img/product/catalog-item4.png" alt="" />
-                  </li>
-                </ul>
-              </div>
-              <div class="gallery-product__wrapper">
-                <div
-                  class="
-                    gallery-product__arrow gallery-product__arrow_prev
-                    _icon-arrow_gallery
-                  "
-                ></div>
-                <div
-                  class="
-                    swiper-container
-                    product__slider_gallery
-                    gallery-product
-                    _swiper
-                  "
-                >
-                  <ul class="gallery-product__list swiper-wrapper">
-                    <li class="gallery-product__item _ibg swiper-slide">
-                      <img src="img/product/catalog-item1_small.png" alt="" />
-                    </li>
-                    <li class="gallery-product__item _ibg swiper-slide">
-                      <img src="img/product/catalog-item2_small.png" alt="" />
-                    </li>
-                    <li class="gallery-product__item _ibg swiper-slide">
-                      <img src="img/product/catalog-item3_small.png" alt="" />
-                    </li>
-                    <li class="gallery-product__item _ibg swiper-slide">
-                      <img src="img/product/catalog-item4_small.png" alt="" />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="
-                    gallery-product__arrow gallery-product__arrow_next
-                    _icon-arrow_gallery
-                  "
-                ></div>
-              </div>
-              <a
-                href="tel:+380665670204"
-                data-da=".product__body,991,last"
-                class="product__callback-block"
-              >
-                <p class="product__callback-text">
-                  Повоните сейчас<span>И запишитесь на консультацию</span>
-                </p>
-                <span class="product__callback-number">(066) 567-02-04</span>
-              </a>
-            </div>
-            <div class="product__column product__column_r">
-              <span class="product__category">Выбропресованная плитка</span>
-              <h1>Тротуарная плитка австрийский гросс</h1>
-              <div class="product__info">
-                <span class="product__status">Заканчиваеться</span>
-                <span class="product__marking">NOVA PL 03 24 45</span>
-              </div>
-              <hr />
-              <form action="#" class="form product__form" id="product__form">
-                <div class="product__form-line">
-                  <div class="product__thickness">
-                    <span class="_criteria">Толщина:</span>
-                    <div class="product__thickness-options">
-                      <input
-                        type="radio"
-                        name="product_thickness"
-                        class="btn"
-                        id="25mm"
-                        checked
-                      />
-                      <label for="25mm">25мм</label>
-                      <input
-                        type="radio"
-                        name="product_thickness"
-                        class="btn"
-                        id="40mm"
-                      />
-                      <label for="40mm">40мм</label>
-                      <input
-                        type="radio"
-                        name="product_thickness"
-                        class="btn"
-                        id="60mm"
-                      />
-                      <label for="60mm">60мм</label>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="product__color">
-                    <span class="_criteria">Цвет:</span>
-                    <div class="product__color-options">
-                      <input
-                        type="radio"
-                        name="product_color"
-                        id="color_1"
-                        checked
-                      />
-                      <label for="color_1" class="color_1"><span></span></label>
-                      <input type="radio" name="product_color" id="color_2" />
-                      <label for="color_2" class="color_2"><span></span></label>
-                      <input type="radio" name="product_color" id="color_3" />
-                      <label for="color_3" class="color_3"><span></span></label>
-                      <input type="radio" name="product_color" id="color_4" />
-                      <label for="color_4" class="color_4"><span></span></label>
-                      <input type="radio" name="product_color" id="color_5" />
-                      <label for="color_5" class="color_5"><span></span></label>
-                    </div>
-                  </div>
-                  <hr />
-                </div>
-              </form>
-              <span class="product__quantity _criteria"
-                >Количество в м<sup>2</sup> :<span>90 штук</span></span
-              >
-              <hr />
-              <div class="product__weight">
-                <span class="product__weight-title _criteria"
-                  >Вес:<span>65kg *</span></span
-                >
-                <span class="product__weight-span"
-                  >*Вес указан за 100 штук</span
-                >
-              </div>
-              <hr class="_pc-hidden" />
-              <div class="product__submit-block">
-                <span class="product__price-title"
-                  >Цена:<span>За 1 м.кв</span></span
-                >
-                <span class="product__price _icon-uah">102</span>
-                <button
-                  href="#order"
-                  form="product__form"
-                  class="form__btn product__btn btn _popup-link"
-                >
-                  Заказать
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="product__description">
-            <h2 class="_h2">Описание</h2>
-            <p>
-              Одна из самых популярных форм тротуарной плитки – тротуарная
-              плитка старый город. С закругленными углами и слегка выпуклой
-              верхней поверхностью тротуарная плитка старый город, “переносит”
-              нас к началу XIX столетия, когда гужевой и общественный транспорт
-              стал широко расширяться в Европе. На тот момент мостовые и главные
-              улицы городов мостили обработанным натуральным камнем. Как
-              правило, камню придавали простую четырехгранную форму и при
-              мощении дороги очень плотно укладывали друг к другу. Данный вид
-              мощение показал себя наиболее надежным и прочным, даже при порче
-              каких либо блоков их легко можно было заменить на новые.
-            </p>
-            <p>
-              Вариации форм и размеров делает тротуарную плитку старый город
-              универсальным элементом мощения дворовых площадок, дорог,
-              тротуаров самых сложных форм и размеров. Тротуарная плитка старый
-              город благодаря широкой цветовой гамме топингов, дает возможность
-              реализовать оригинальные узоры и придать вашему участку
-              уникальный, неповторимый стиль.
-            </p>
-          </div>
-        </section>
-        <section class="popular">
-          <div class="popular__content _container">
-            <h2 class="popular__title _h2">Вам также может понравиться</h2>
-            <div class="popular__navigation">
-              <div
-                class="popular__arrow popular__arrow_l _icon-arrow_paggination"
-              ></div>
-              <div
-                class="popular__arrow popular__arrow_r _icon-arrow_paggination"
-              ></div>
-            </div>
-            <div class="popular__swiper swiper-container">
-              <div class="popular__swiper-wrapper swiper-wrapper">
-                <a href="#" class="popular__item item-popular swiper-slide">
-                  <div class="item-popular__img-wrapper _ibg">
-                    <img
-                      data-src="img/catalog/content/catalog-item1.webp"
-                      class="swiper-lazy"
-                      alt=""
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="item-popular__description-block">
-                    <span class="item-popular__category"
-                      >Изделия из бетона</span
-                    >
-                    <h4 class="item-popular__title _h4">
-                      Тротуарная плитка австрийский гросс
-                    </h4>
-                    <p class="item-popular__price-wrapper">
-                      <span class="item-popular__price _icon-uah">145</span>
-                      <span class="item-popular__meter">За 1 м.кв</span>
-                    </p>
-                  </div>
-                  <div class="item-popular__btn _icon-arrow_detailed"></div>
-                </a>
-                <a href="#" class="popular__item item-popular swiper-slide">
-                  <div class="item-popular__img-wrapper _ibg">
-                    <img
-                      data-src="img/catalog/content/catalog-item2.webp"
-                      class="swiper-lazy"
-                      alt=""
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="item-popular__description-block">
-                    <span class="item-popular__category"
-                      >Выбропресованная плитка</span
-                    >
-                    <h4 class="item-popular__title _h4">
-                      Тротуарная плитка старый город
-                    </h4>
-                  </div>
-                  <p class="item-popular__price-wrapper">
-                    <span class="item-popular__price _icon-uah">124</span>
-                    <span class="item-popular__meter">За 1 м.кв</span>
-                  </p>
-                  <div class="item-popular__btn _icon-arrow_detailed"></div>
-                </a>
-                <a href="#" class="popular__item item-popular swiper-slide">
-                  <div class="item-popular__img-wrapper _ibg">
-                    <img
-                      data-src="img/catalog/content/catalog-item3.webp"
-                      class="swiper-lazy"
-                      alt=""
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="item-popular__description-block">
-                    <span class="item-popular__category">Бордюры бетонные</span>
-                    <h4 class="item-popular__title _h4">ФЭМ Бордюр Дорожный</h4>
-                  </div>
-                  <p class="item-popular__price-wrapper">
-                    <span class="item-popular__price _icon-uah">60.50</span>
-                    <span class="item-popular__meter">За 1 м.кв</span>
-                  </p>
-                  <div class="item-popular__btn _icon-arrow_detailed"></div>
-                </a>
-                <a href="#" class="popular__item item-popular swiper-slide">
-                  <div class="item-popular__img-wrapper _ibg">
-                    <img
-                      data-src="img/catalog/content/catalog-item4.webp"
-                      class="swiper-lazy"
-                      alt=""
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="item-popular__description-block">
-                    <span class="item-popular__category"
-                      >Вибролитьевая плитка</span
-                    >
-                    <h4 class="item-popular__title _h4">
-                      Тротуарная плитка австрийский гросс
-                    </h4>
-                    <p class="item-popular__price-wrapper">
-                      <span class="item-popular__price _icon-uah">102</span>
-                      <span class="item-popular__meter">За 1 м.кв</span>
-                    </p>
-                  </div>
-                  <div class="item-popular__btn _icon-arrow_detailed"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="form-section">
-          <div class="form-section__content _container">
-            <div class="form-section__body">
-              <h5 class="form-section__title _h5">Остались вопросы?</h5>
-              <p class="form-section__sub-title">
-                Оставьте ваш номер телефона и мы вам перезвоним
-              </p>
-              <form action="#" class="form-section__form form">
-                <div class="form-section__form-line form__line form__line_name">
-                  <input
-                    autocomplete="off"
-                    type="text"
-                    name="form[]"
-                    data-value="Введите имя"
-                    class="form__input input _req"
-                  />
-                </div>
-                <div
-                  class="form-section__form-line form__line form__line_number"
-                >
-                  <input
-                    autocomplete="off"
-                    type="text"
-                    name="form[]"
-                    data-value="+380(__)_______ "
-                    class="form__input input _req _phone"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  class="form-section__btn form__button btn"
-                >
-                  Отправить
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
-        <section class="main-info">
-          <div class="main-info__content">
-            <div class="main-info__head _container">
-              <div class="main-info__head-content">
-                <div class="main-info__row main-info__row_1">
-                  <div class="main-info__logo"></div>
-                  <h6 class="main-info__title _h6">Наш магазин по адрессу:</h6>
-                </div>
-                <div class="main-info__row main-info__row_2">
-                  <span class="main-info__address"
-                    >г. Херсон, Ул.Газовая,8</span
-                  >
-                  <span class="main-info__schedule">
-                    <p>Пн-Пт:&nbsp;&nbsp;8:30 — 17:00</p>
-                    <span>/</span>
-                    <p>Сб:&nbsp;&nbsp;8:30 — 13:00</p>
-                    <span>/</span>
-                    <p>Вс:&nbsp;&nbsp;Выходной</p>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="main-info__map" id="map">
-              <iframe
-                src="https://www.google.ru/maps/place/Тротуарная+плитка+Split+Херсон/@46.6620921,32.5704536,17z/data=!3m1!4b1!4m5!3m4!1s0x40c41b6dbe442799:0x7c629151c6301de2!8m2!3d46.6620718!4d32.5727089"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-        </section>
-      </main>
-      @@include('_footer.html',{})
-    </div>
-    @@include('_popup.html',{}) @@include('_js.html',{})
-  </body>
+	@@include('_head.html',{ "title":"Продукт" })
+
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page product _bg-gray">
+				<section class="product__content _container">
+					<div class="product-breadcrumbs _breadcrumbs">
+						<ul class="breadcrumbs-catalog__list">
+							<li class="breadcrumbs-catalog__item">
+								<a href="index.html">Главная</a>
+							</li>
+							<li><span>&nbsp;—&nbsp;</span></li>
+							<li class="breadcrumbs-catalog__item">
+								<a href="catalog.html">Каталог</a>
+							</li>
+							<li><span>&nbsp;—&nbsp;</span></li>
+							<li class="breadcrumbs-catalog__item">
+								<a href="#">Выбропресованная плитка</a>
+							</li>
+							<li><span>&nbsp;—&nbsp;</span></li>
+							<li class="breadcrumbs-catalog__item">Тротуарная плитка австрийский гросс</li>
+						</ul>
+					</div>
+					<div class="product__body">
+						<div class="product__column product__column_l">
+							<div class="swiper-container product__slider_big _swiper">
+								<ul class="swiper-wrapper">
+									<li class="product__img-wrapper _ibg swiper-slide">
+										<img src="img/product/catalog-item1.png" alt="" />
+									</li>
+									<li class="product__img-wrapper _ibg swiper-slide">
+										<img src="img/product/catalog-item2.png" alt="" />
+									</li>
+									<li class="product__img-wrapper _ibg swiper-slide">
+										<img src="img/product/catalog-item3.png" alt="" />
+									</li>
+									<li class="product__img-wrapper _ibg swiper-slide">
+										<img src="img/product/catalog-item4.png" alt="" />
+									</li>
+								</ul>
+							</div>
+							<div class="gallery-product__wrapper">
+								<div class="gallery-product__arrow gallery-product__arrow_prev _icon-arrow_gallery"></div>
+								<div class="swiper-container product__slider_gallery gallery-product _swiper">
+									<ul class="gallery-product__list swiper-wrapper">
+										<li class="gallery-product__item _ibg swiper-slide">
+											<img src="img/product/catalog-item1_small.png" alt="" />
+										</li>
+										<li class="gallery-product__item _ibg swiper-slide">
+											<img src="img/product/catalog-item2_small.png" alt="" />
+										</li>
+										<li class="gallery-product__item _ibg swiper-slide">
+											<img src="img/product/catalog-item3_small.png" alt="" />
+										</li>
+										<li class="gallery-product__item _ibg swiper-slide">
+											<img src="img/product/catalog-item4_small.png" alt="" />
+										</li>
+									</ul>
+								</div>
+								<div class="gallery-product__arrow gallery-product__arrow_next _icon-arrow_gallery"></div>
+							</div>
+							<a href="tel:+380665670204" data-da=".product__body,991,last" class="product__callback-block">
+								<p class="product__callback-text">Повоните сейчас<span>И запишитесь на консультацию</span></p>
+								<span class="product__callback-number">(066) 567-02-04</span>
+							</a>
+						</div>
+						<div class="product__column product__column_r">
+							<span class="product__category">Выбропресованная плитка</span>
+							<h1>Тротуарная плитка австрийский гросс</h1>
+							<div class="product__info">
+								<span class="product__status">Заканчиваеться</span>
+								<span class="product__marking">NOVA PL 03 24 45</span>
+							</div>
+							<hr />
+							<form action="#" class="form product__form" id="product__form">
+								<div class="product__form-line">
+									<div class="product__thickness">
+										<span class="_criteria">Толщина:</span>
+										<div class="product__thickness-options">
+											<input type="radio" name="product_thickness" class="btn" id="25mm" checked />
+											<label for="25mm">25мм</label>
+											<input type="radio" name="product_thickness" class="btn" id="40mm" />
+											<label for="40mm">40мм</label>
+											<input type="radio" name="product_thickness" class="btn" id="60mm" />
+											<label for="60mm">60мм</label>
+										</div>
+									</div>
+									<hr />
+									<div class="product__color">
+										<span class="_criteria">Цвет:</span>
+										<div class="product__color-options">
+											<input type="radio" name="product_color" id="color_1" checked />
+											<label for="color_1" class="color_1"><span></span></label>
+											<input type="radio" name="product_color" id="color_2" />
+											<label for="color_2" class="color_2"><span></span></label>
+											<input type="radio" name="product_color" id="color_3" />
+											<label for="color_3" class="color_3"><span></span></label>
+											<input type="radio" name="product_color" id="color_4" />
+											<label for="color_4" class="color_4"><span></span></label>
+											<input type="radio" name="product_color" id="color_5" />
+											<label for="color_5" class="color_5"><span></span></label>
+										</div>
+									</div>
+									<hr />
+								</div>
+							</form>
+							<span class="product__quantity _criteria">Количество в м<sup>2</sup> :<span>90 штук</span></span>
+							<hr />
+							<div class="product__weight">
+								<span class="product__weight-title _criteria">Вес:<span>65kg *</span></span>
+								<span class="product__weight-span">*Вес указан за 100 штук</span>
+							</div>
+							<hr class="_pc-hidden" />
+							<div class="product__submit-block">
+								<span class="product__price-title">Цена:<span>За 1 м.кв</span></span>
+								<span class="product__price _icon-uah">102</span>
+								<button href="#order" form="product__form" class="form__btn product__btn btn _popup-link">Заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="product__description">
+						<h2 class="_h2">Описание</h2>
+						<p>
+							Одна из самых популярных форм тротуарной плитки – тротуарная плитка старый город. С закругленными углами и слегка выпуклой верхней поверхностью тротуарная плитка старый город, “переносит” нас к началу XIX столетия, когда гужевой и общественный транспорт стал широко расширяться в Европе. На тот момент мостовые и главные улицы городов мостили обработанным натуральным камнем. Как правило, камню придавали простую четырехгранную форму и при мощении дороги очень плотно укладывали друг к
+							другу. Данный вид мощение показал себя наиболее надежным и прочным, даже при порче каких либо блоков их легко можно было заменить на новые.
+						</p>
+						<p>Вариации форм и размеров делает тротуарную плитку старый город универсальным элементом мощения дворовых площадок, дорог, тротуаров самых сложных форм и размеров. Тротуарная плитка старый город благодаря широкой цветовой гамме топингов, дает возможность реализовать оригинальные узоры и придать вашему участку уникальный, неповторимый стиль.</p>
+					</div>
+				</section>
+				<section class="popular">
+					<div class="popular__content _container">
+						<h2 class="popular__title _h2">Вам также может понравиться</h2>
+						<div class="popular__navigation">
+							<div class="popular__arrow popular__arrow_l _icon-arrow_paggination"></div>
+							<div class="popular__arrow popular__arrow_r _icon-arrow_paggination"></div>
+						</div>
+						<div class="popular__swiper swiper-container">
+							<div class="popular__swiper-wrapper swiper-wrapper">
+								<a href="#" class="popular__item item-popular swiper-slide">
+									<div class="item-popular__img-wrapper _ibg">
+										<img data-src="img/catalog/content/catalog-item1.webp" class="swiper-lazy" alt="" />
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="item-popular__description-block">
+										<span class="item-popular__category">Изделия из бетона</span>
+										<h4 class="item-popular__title _h4">Тротуарная плитка австрийский гросс</h4>
+										<p class="item-popular__price-wrapper">
+											<span class="item-popular__price _icon-uah">145</span>
+											<span class="item-popular__meter">За 1 м.кв</span>
+										</p>
+									</div>
+									<div class="item-popular__btn _icon-arrow_detailed"></div>
+								</a>
+								<a href="#" class="popular__item item-popular swiper-slide">
+									<div class="item-popular__img-wrapper _ibg">
+										<img data-src="img/catalog/content/catalog-item2.webp" class="swiper-lazy" alt="" />
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="item-popular__description-block">
+										<span class="item-popular__category">Выбропресованная плитка</span>
+										<h4 class="item-popular__title _h4">Тротуарная плитка старый город</h4>
+									</div>
+									<p class="item-popular__price-wrapper">
+										<span class="item-popular__price _icon-uah">124</span>
+										<span class="item-popular__meter">За 1 м.кв</span>
+									</p>
+									<div class="item-popular__btn _icon-arrow_detailed"></div>
+								</a>
+								<a href="#" class="popular__item item-popular swiper-slide">
+									<div class="item-popular__img-wrapper _ibg">
+										<img data-src="img/catalog/content/catalog-item3.webp" class="swiper-lazy" alt="" />
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="item-popular__description-block">
+										<span class="item-popular__category">Бордюры бетонные</span>
+										<h4 class="item-popular__title _h4">ФЭМ Бордюр Дорожный</h4>
+									</div>
+									<p class="item-popular__price-wrapper">
+										<span class="item-popular__price _icon-uah">60.50</span>
+										<span class="item-popular__meter">За 1 м.кв</span>
+									</p>
+									<div class="item-popular__btn _icon-arrow_detailed"></div>
+								</a>
+								<a href="#" class="popular__item item-popular swiper-slide">
+									<div class="item-popular__img-wrapper _ibg">
+										<img data-src="img/catalog/content/catalog-item4.webp" class="swiper-lazy" alt="" />
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="item-popular__description-block">
+										<span class="item-popular__category">Вибролитьевая плитка</span>
+										<h4 class="item-popular__title _h4">Тротуарная плитка австрийский гросс</h4>
+										<p class="item-popular__price-wrapper">
+											<span class="item-popular__price _icon-uah">102</span>
+											<span class="item-popular__meter">За 1 м.кв</span>
+										</p>
+									</div>
+									<div class="item-popular__btn _icon-arrow_detailed"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="form-section">
+					<div class="form-section__content _container">
+						<div class="form-section__body">
+							<h5 class="form-section__title _h5">Остались вопросы?</h5>
+							<p class="form-section__sub-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
+							<form action="#" class="form-section__form form">
+								<div class="form-section__form-line form__line form__line_name">
+									<input autocomplete="off" type="text" name="form[]" data-value="Введите имя" class="form__input input _req" />
+								</div>
+								<div class="form-section__form-line form__line form__line_number">
+									<input autocomplete="off" type="text" name="form[]" data-value="+380(__)_______ " class="form__input input _req _phone" />
+								</div>
+								<button type="submit" class="form-section__btn form__button btn">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="main-info">
+					<div class="main-info__content">
+						<div class="main-info__head _container">
+							<div class="main-info__head-content">
+								<div class="main-info__row main-info__row_1">
+									<div class="main-info__logo"></div>
+									<h6 class="main-info__title _h6">Наш магазин по адрессу:</h6>
+								</div>
+								<div class="main-info__row main-info__row_2">
+									<span class="main-info__address">г. Херсон, Ул.Газовая,8</span>
+									<span class="main-info__schedule">
+										<p>Пн-Пт:&nbsp;&nbsp;8:30 — 17:00</p>
+										<span>/</span>
+										<p>Сб:&nbsp;&nbsp;8:30 — 13:00</p>
+										<span>/</span>
+										<p>Вс:&nbsp;&nbsp;Выходной</p>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="main-info__map" id="map">
+							<iframe src="https://www.google.ru/maps/place/Тротуарная+плитка+Split+Херсон/@46.6620921,32.570 data=!3m1!4b1!4m5!3m4!1s0x40c41b6dbe442799:0x7c629151c6301de2!8m2!3d46.6620718!4d32.5727089" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_popup.html',{}) @@include('_js.html',{})
+	</body>
 </html>
